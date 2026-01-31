@@ -1,12 +1,12 @@
-# ARVAMUSLOO STRATEEGILINE PLAAN JA STRUKTUUR
+# Strategic Plan for Opinion Editorial
 
-**Tööpealkiri:** E-riigi mädanenud vundament
-**Fookus:** SK ID Solutionsi vastutus ja arhitektuurilised vajakajäämised
-**Sihtgrupp:** Eesti avalikkus, poliitikakujundajad (RIA, MKM), pangajuhid, IT-kogukond.
+**Working Title:** E-riigi mädanenud vundament (The Rotting Foundation of E-Estonia)
+**Focus:** SK ID Solutions' responsibility and architectural shortcomings
+**Target Audience:** Estonian public, policymakers (RIA, MKM), bank executives, IT community.
 
 ---
 
-## 1. PEALKIRJA IDEED (Headlines)
+## 1. Headlines (Pealkiri Ideed)
 
 *Eesmärk on olla provokatiivne, kuid tõsiseltvõetav, tekitades lugejas tunde, et teda on petetud.*
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 2. STRUKTUURNE KAVA (Structural Outline)
+## 2. Structural Outline (Struktuurne Kava)
 
 ### I. Sissejuhatus: Müüdi purunemine
 
@@ -59,13 +59,13 @@
 
 ---
 
-## 3. ARGUMENTATSIOONISTRATEEGIA (Step-by-Step)
+## 3. Argumentatsioonistrateegia (Step-by-Step)
 
 Selleks, et artikkel oleks mõjuv ja eristuks Arnis Parsovsi varasemast kriitikast, tuleb järgida ranget strateegiat.
 
 ### Samm 1: Eristumine Parsovsi narratiivist (VÄGA TÄHTIS)
 
-Parsovs ründas panku (*implementeerijaid*). Sina ründad SK ID Solutionsi (*arhitekti*). See nihe on kriitiline, et artikkel ei tunduks kordusena.
+Parsovs ründab panku (*implementeerijaid*). Sina ründad SK ID Solutionsi (*arhitekti*). See nihe on kriitiline, et artikkel ei tunduks kordusena.
 
 **Võrdlustabel: Parsovs vs. Uus Op-Ed (Abel)**
 
