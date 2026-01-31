@@ -36,9 +36,9 @@ Riikliku tähtsusega identiteediteenuse pakkuja ei tohi käituda riskikapitalil 
 
 **Strateegiline eesmärk:** Demüstifitseerida tehniline rünnak lihtsa analoogia kaudu, et lugeja mõistaks ohu reaalsust.
 
-Ma ei räägi siin teoreetilisest riskist. Ma räägin Smart-ID ja selle "täiustatud" versiooni Smart-ID+ arhitektuurilisest august, mida nimetatakse *QRLJackinguks*. Enne kui asume kritiseerima otsuseid, peame mõistma probleemi olemust.
+Ma ei räägi siin teoreetilisest riskist. Ma räägin Smart-ID ja selle "täiustatud" versiooni Smart-ID+ arhitektuurilisest august, mida nimetakse *QRLJackinguks*. Enne kui asume kritiseerima otsuseid, peame mõistma probleemi olemust.
 
-Vaatame tõele näkku. Smart-ID praegune lahendus võimaldab ründajal luua võltsitud sisselogimislehe, mis kuvab panga tegelikku QR-koodi. Kasutaja skaneerib koodi, arvates, et logib sisse oma kontole, kuid tegelikult kingib ta oma aktiivse sessiooni ründajale. Süsteem ei kontrolli, kas skaneeriv seade ja sisselogiv brauser asuvad samas ruumis või isegi samal kontinendil. Puudub *context binding*. See on sama, kui autovõtmed avaksid suvalise auto, mille kõrval sa parajasti seisad, eeldades, et ju sa oled omanik.
+Vatame tõele näkku. Smart-ID praegune lahendus võimaldab ründajal luua võltsitud sisselogimislehe, mis kuvab panga tegelikku QR-koodi. Kasutaja skaneerib koodi, arvates, et logib sisse oma kontole, kuid tegelikult kingib ta oma aktiivse sessiooni ründajale. Süsteem ei kontrolli, kas skaneeriv seade ja sisselogiv brauser asuvad samas ruumis või isegi samal kontinendil. Puudub *context binding*. See on sama, kui autovõtmed avaksid suvalise auto, mille kõrval sa parajasti seisad, eeldades, et ju sa oled omanik.
 
 Tooge see pärisellu: kujutage ette olukorda, kus kuller (pank) annab teie paki (ligipääsu kontole) üle inimesele, kes seisab teie kortermaja ukse ees, kontrollimata, kas see inimene tegelikult seal elab või omab korteri võtmeid. Smart-ID süsteemil puudub praegusel kujul piisavalt tugev *context binding* ehk seos reaalse seadme ja sessiooni vahel. Süsteem "eeldab", et skaneerija on aus, selle asemel et seda matemaatiliselt tõestada. See ei ole teoreetiline oht laborist – see on reaalne arhitektuuriline lünk, mis võimaldab sessiooni kaaperdamist sekunditega.
 
@@ -113,4 +113,4 @@ Turvalisus ei ole koht, kus teha kompromisse mugavuse nimel. Turvalisus on e-rii
 
 ***
 
-**Toimetaja märkus:** *Artikkel põhineb autori valduses oleval kirjavahetusel SK ID Solutionsiga ning avalikel andmetel CVE andmebaasist. SK ID on kinnitanud turvanõrkuse teadmist, kuid peab seda juhitavaks riskiks. Kirjavahetuse kuupäev: 5. detsember 2025.*
+**Toimetaja märkus:** *Artikkel põhineb autori valduses oleval kirjavahetusel SK ID Solutionsiga ning avalikel andmetel CVE andmebaasist. SK on kinnitanud turvanõrkuse teadmist, kuid peab seda juhitavaks riskiks. Kirjavahetuse kuupäev: 5. detsember 2025.*

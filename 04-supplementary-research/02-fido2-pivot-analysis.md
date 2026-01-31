@@ -1,9 +1,11 @@
+# Technical Feasibility of FIDO2/WebAuthn Pivot for eIDAS QES and High Assurance
+
 **To:** Executive Steering Committee
 **From:** Senior Security Architect & Product Lead
 **Date:** October 26, 2023
 **Subject:** Technical Feasibility of FIDO2/WebAuthn Pivot for eIDAS QES and High Assurance
 
-### **Executive Summary**
+## Executive Summary
 
 You have asked whether pivoting to a **FIDO2/WebAuthn-based mobile authenticator** (mimicking the SQRL "scan-to-login" UX) can replicate the **Qualified Electronic Signature (QES)** and **Level of Assurance (LoA) 'High'** capabilities currently offered by the proprietary Smart-ID system.
 
@@ -16,7 +18,7 @@ This approach effectively modernizes the UX (solving the phishing/notification b
 
 ---
 
-### **1. The Architectural Gap: Authentication vs. Qualified Signing**
+## 1. The Architectural Gap: Authentication vs. Qualified Signing
 
 To understand the complexity, we must distinguish between the two functions Smart-ID performs:
 
@@ -31,11 +33,11 @@ To understand the complexity, we must distinguish between the two functions Smar
 
 ---
 
-### **2. The Solution: FIDO2 as the "Sole Control" Trigger**
+## 2. The Solution: FIDO2 as the "Sole Control" Trigger
 
 To achieve QES with a FIDO2 pivot, we must decouple the *Authorization* from the *Signing*. We move from a "Device Signing" model to a **"Remote Signing" (Server-Signing)** model, governed by the **Cloud Signature Consortium (CSC)** standards.
 
-#### **The Proposed Architecture**
+### The Proposed Architecture
 
 1. **The Identity Proofing (Onboarding):**
     * User downloads the App.
@@ -57,15 +59,15 @@ To achieve QES with a FIDO2 pivot, we must decouple the *Authorization* from the
 
 ---
 
-### **3. Compliance Analysis: Can it meet the Standards?**
+## 3. Compliance Analysis: Can it meet the Standards?
 
-#### **Requirement A: EU QES (Paper Signature Equivalence)**
+### Requirement A: EU QES (Paper Signature Equivalence)
 
 * **Status:** **ACHIEVABLE.**
 * **Mechanism:** By utilizing a certified Remote QSCD (HSM) and using FIDO2 Level 2 (L2) certified authenticators (most modern smartphones) as the authorization channel, you meet the requirements of CEN/TS 419 241 (Remote Qualified Signature Creation).
 * **Caveat:** You must be audited as a QTSP (Qualified Trust Service Provider). This is an operational burden, not a technical one.
 
-#### **Requirement B: eIDAS Level of Assurance (LoA) 'High'**
+### Requirement B: eIDAS Level of Assurance (LoA) 'High'
 
 * **Status:** **ACHIEVABLE.**
 * **Criteria:** LoA High requires:
@@ -74,7 +76,7 @@ To achieve QES with a FIDO2 pivot, we must decouple the *Authorization* from the
     3. **Authentication Factor:** 2-Factor (Something you have + Something you are). *FIDO2 + Biometrics meets this.*
 * **Note:** Smart-ID currently holds LoA High. The FIDO2 pivot matches this *if* the backend HSM infrastructure is EAL4+ certified and the onboarding process remains strict.
 
-#### **Requirement C: Identity Attribute Provisioning**
+### Requirement C: Identity Attribute Provisioning
 
 * **Status:** **ACHIEVABLE.**
 * **Mechanism:** FIDO2 itself is anonymous. However, the OpenID Connect (OIDC) layer wrapped around it handles the identity.
@@ -83,7 +85,7 @@ To achieve QES with a FIDO2 pivot, we must decouple the *Authorization* from the
 
 ---
 
-### **4. Strategic Comparison: FIDO2 Pivot vs. Smart-ID**
+## 4. Strategic Comparison: FIDO2 Pivot vs. Smart-ID
 
 | Feature | Current Smart-ID (Split-Key) | Proposed FIDO2 Pivot (Remote QSCD) | Advantage |
 | :--- | :--- | :--- | :--- |
@@ -94,7 +96,7 @@ To achieve QES with a FIDO2 pivot, we must decouple the *Authorization* from the
 | **Sole Control** | User holds key share | User holds FIDO authorization key | **Smart-ID** (Technically stronger strict sole control, but FIDO is legally sufficient) |
 | **Implementation Cost** | N/A (Already built) | **High** (Requires HSM infrastructure) | **Smart-ID** |
 
-### **5. Recommendation & Roadmap**
+## 5. Recommendation & Roadmap
 
 The "FIDO2 Pivot" is not only feasible; it is the **future-proof path**. The industry is moving away from proprietary crypto-schemes (like Smart-ID's split-key) toward standard **Passkeys (FIDO2)** and **Cloud Signing (CSC)**.
 
