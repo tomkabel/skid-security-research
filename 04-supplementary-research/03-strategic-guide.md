@@ -1,108 +1,123 @@
-# Strategic Plan for Opinion Editorial
+# Editorial Strategy: The Smart-ID "Conscious Choice" Investigation
 
-**Working Title:** E-riigi mädanenud vundament (The Rotting Foundation of E-Estonia)
-**Focus:** SK ID Solutions' responsibility and architectural shortcomings
-**Target Audience:** Estonian public, policymakers (RIA, MKM), bank executives, IT community.
+## 1. Target Market Analysis: Estonian Media Landscape
 
----
+To maximize impact, you must tailor the pitch and tone to the specific outlet. The Estonian media market is small, highly digitized, and values rational discourse over emotionalism.
 
-## 1. Headlines (Pealkiri Ideed)
-
-*Eesmärk on olla provokatiivne, kuid tõsiseltvõetav, tekitades lugejas tunde, et teda on petetud.*
-
-1. **"Smart-ID 'teadlik valik': Miks teie pangakonto tühjendamine on sisseprogrammeeritud risk?"** (Rõhk disainivalikul)
-2. **"Mugavuse altaril ohverdatud turvalisus: SK ID Solutionsi ohtlik monopol."** (Rõhk monopoolsel seisundil)
-3. **"E-riigi lahtine tagauks: Meil on tõendid, et nad teadsid turvaaugust, aga ei parandanud seda."** (Uuriv/paljastav toon)
-4. **"Miks Smart-ID kaitseb endiselt 2017. aasta ohtude eest, kui kurjategijad elavad aastas 2026?"** (Rõhk innovatsiooni puudumisel)
-5. **"Nutikas lõks: Kuidas SK ID Solutions tegi identiteedivargusest triviaalne."** (Lühike ja lööv)
+| Publication | **Postimees** (The Establishment) | **ERR** (The Public Record) | **Delfi** (The Mass Appeal) |
+| :--- | :--- | :--- | :--- |
+| **Profile** | Conservative, intellectual, business-friendly. Equivalent to *The Times* or *FAZ*. | State broadcaster. Neutral, policy-heavy, rigorous fact-checking. Equivalent to *BBC*. | High-traffic portal. Younger audience, sharper headlines, investigative but punchy. |
+| **Ideal Tone** | **Forensic & Economic.** Focus on the governance failure, corporate negligence, and the threat to Estonia’s "e-reputation." | **Regulatory & Civic.** Focus on legal breaches (eIDAS), the failure of RIA (State Information System Authority), and public safety. | **Consumer Protection & Outrage.** Focus on the victim, the "Davids vs. Goliath" (Citizens vs. Bank Cartel). |
+| **Reader Demographic** | Politicians, business leaders, older intellectuals. | Policy wonks, government officials, general public. | The general public, tech-savvy youth, dissatisfied voters. |
+| **Verdict** | **Primary Target.** Postimees’ Opinion/Investigative section (*Arvamus/Uudised*) carries the most weight for forcing policy change. | **Secondary Target.** Best for a follow-up interview or radio discussion once the Op-Ed breaks. | **Tertiary Target.** Good for viral spread, but less likely to trigger immediate regulatory review. |
 
 ---
 
-## 2. Structural Outline (Struktuurne Kava)
+## 2. Argumentation Framework: The "Nordic Pragmatism" Model
 
-### I. Sissejuhatus: Müüdi purunemine
+Estonian rhetoric rejects hyperbole. To win the argument, you must avoid sounding like a conspiracy theorist and sound like a **system auditor**.
 
-* **Konks (Hook):** Alusta terava kontrastiga Eesti "digitaalse eduloo" maine ja reaalse pettuste epideemia vahel. Maini, et ohver ei ole enam "loll kasutaja", vaid süsteemse hooletuse ohver.
-* **Probleemi ümberdefineerimine:** Lükka ümber väide, et pettused on vaid pankade või kasutajate probleem.
-* **Tees (Thesis):** Pettuste laviin ei ole vääramatu jõud, vaid SK ID Solutionsi (SK) teadlike arhitektuuriliste valikute ja monopoolse mugavustsooni otsene tagajärg. Nad eelistavad UX-i (kasutajakogemust) turvalisusele.
-
-### II. Arhitektuuriline analüüs: "Uks on lukus, aga sein puudub"
-
-* **Tehniline sisu lihtsas keeles:** Selgita *QRLJacking* ja *Man-in-the-Middle* (MitM) rünnakute olemust Smart-ID kontekstis.
-* **Kriitika tuum:** Süsteemil puudub *Context Binding* (seose loomine reaalse seadme ja sessiooni vahel). Smart-ID "eeldab" usaldust, selle asemel et seda matemaatiliselt tõestada (nagu teevad FIDO2/WebAuthn standardid).
-* **Smart-ID+ müüt:** Selgita, miks isegi "uus" lahendus on poolik rehkendus, kui see ei lahenda fundamentaalset sessiooni sidumise probleemi.
-
-### III. "Suitsev püstol": Tõendid teadlikust hooletusest
-
-* **Uuriv element:** Tsiteeri 5. detsembri 2025 kirjavahetust. See on artikli emotsionaalne ja juriidiline raskuskese.
-* **Tsitaadi analüüs:** Fraas "oleme seda riski teadlikult aktsepteerinud" tähendab, et inimeste rahaline häving on SK jaoks aktsepteeritav "kulu" arenduskiiruse nimel.
-* **CVE staatus:** Too sisse "DISPUTED" staatus rahvusvahelises andmebaasis. Näita, et SK on ülbelt eitanud probleemi, mida muu maailm peab veaks.
-
-### IV. Monopoli mugavustsoon ja innovatsioonipidur
-
-* **Turupositsioon:** SK ID Solutions on *de facto* monopol. Eestlasel pole valikut (ID-kaart on mobiilis ebamugav, Mobiil-ID hääbub).
-* **Mõju turvalisusele:** Monopolil puudub motivatsioon "joosta kiiremini". Kui konkurents puudub, ei pea parandama "teadaolevaid vigu".
-* **Äriline prioriteet:** Kasutusmugavus (UX) toob kasu (rohkem tehinguid pankadele), turvalisus toob kulu. SK teenib oma omanikke (panku), mitte Eesti rahvast.
-
-### V. Vastuväidete ennetamine ja ümberlükkamine
-
-* **Vastuväide:** "Turvalisus teeb kasutamise liiga keeruliseks."
-* **Ümberlükkamine:** Vale. Kaasaegsed standardid (FIDO2/Passkeys) on *mugavamad* ja turvalisemad. SK pole neid juurutanud laiskusest või tehnilisest võlast, mitte kasutaja huvides.
-
-### VI. Kokkuvõte ja Üleskutse (Call to Action)
-
-* **Kokkuvõte:** SK ID Solutions on jätnud Eesti digitaalse välisukse praokile. See pole viga, see on poliitika.
-* **Nõudmine:**
-    1. **RIA:** Peab sekkuma ja nõudma SK-lt *context binding* tehnoloogia (mitte ainult visuaalse kontrolli) rakendamist.
-    2. **SK ID Solutions:** Peab lõpetama vigade "vaidlustamise" ja tunnistama arhitektuurilist võlga.
-    3. **Lõppakord:** Kuni arhitektuuri ei muudeta, on Smart-ID kasutamine "vene rulett" kasutaja varaga.
+* **The "Cold" Approach:** Do not use adjectives like "evil" or "malicious." Use terms like "negligent," "cost-saving," "architectural debt," and "misaligned incentives."
+* **The "Talupojatarkus" (Peasant Wisdom) Hook:** Appeal to common sense. *"If a lock can be opened by a stranger while you are looking at it, the lock is broken, not the owner."*
+* **Data over Drama:** The argument relies on the "Smoking Gun" (the email admission of *teadlikult aktsepteerinud* / consciously accepted risk).
+* **National Pride as Leverage:** Estonia prides itself on being a digital society. Frame this vulnerability not just as a security hole, but as an **embarrassment to the e-Estonia brand** that other nations (using FIDO2) have surpassed.
 
 ---
 
-## 3. Argumentatsioonistrateegia (Step-by-Step)
+## 3. Step-by-Step Structural Outline
 
-Selleks, et artikkel oleks mõjuv ja eristuks Arnis Parsovsi varasemast kriitikast, tuleb järgida ranget strateegiat.
+**Working Title:** *“Teadlikult aktsepteeritud risk: Kuidas SK ID Solutions ohverdas meie turvalisuse mugavuse altaril”* (Consciously Accepted Risk: How SK ID Solutions Sacrificed Our Security on the Altar of Convenience)
 
-### Samm 1: Eristumine Parsovsi narratiivist (VÄGA TÄHTIS)
+### I. The Hook: The Illusion of Control (150 words)
 
-Parsovs ründab panku (*implementeerijaid*). Sina ründad SK ID Solutionsi (*arhitekti*). See nihe on kriitiline, et artikkel ei tunduks kordusena.
+* **Scenario:** Describe a typical Estonian checking their balance. A prompt appears. They enter PIN1. Money vanishes.
+* **The Twist:** The bank blames the user for "gross negligence."
+* **The Assertion:** The user didn't fail. The system did. Smart-ID, the crown jewel of our e-state, has a fundamental design flaw that criminals are exploiting, and the architects *know it*.
 
-**Võrdlustabel: Parsovs vs. Uus Op-Ed (Abel)**
+### II. The Thesis: The Calculated Betrayal (200 words)
 
-| Aspekt | Arnis Parsovsi nurk (Reference) | Tom Kristian Abeli nurk (Target Op-Ed) |
-| :--- | :--- | :--- |
-| **Peamine süüdlane** | Pangad (Swedbank, SEB, LHV). | **SK ID Solutions AS** (Teenusepakkuja). |
-| **Kriitika sisu** | Pangad ei kasuta olemasolevaid tööriistu (Smart-ID+). | **Tööriistad ise on katki** (Smart-ID ja Smart-ID+ arhitektuur). |
-| **Põhiprobleem** | Pankade ahnus ja juriidilise vastutuse puudumine. | **Monopoli tehniline stagnatsioon** ja "Design Flaw". |
-| **Pakutav lahendus** | QR-koodide sundrakendamine pankade poolt. | **Krüptograafiline *Context Binding*** (FIDO2/WebAuthn) juurutamine SK poolt. |
-| **Rünnakuvektor** | Sotsiaalne manipulatsioon (kasutaja on lollitatav). | **QRLJacking / MITM** (tehniline auk, mida kasutaja ei saagi tuvastada). |
+* **Core Claim:** The current fraud epidemic is not a result of clever hackers, but of a monopoly (SK ID Solutions) refusing to implement "origin binding" (linking the app to the specific browser session).
+* **The Evidence:** Cite the specific email/communication where SK admits to "consciously accepting" this risk during the development phase to prioritize User Experience (UX) over cryptographic certainty.
+* **Impact:** This decision decoupled the user's action from the transaction, creating a "blind signing" environment ripe for relay attacks.
 
-### Samm 2: Tehnilise "vea" tõlkimine "moraalseks valikuks"
+### III. Evidence Layer A: The Technical Autopsy (300 words)
 
-Ära jää liiga tehniliseks. Kasuta CVE vaidlustamist ja lekkinud kirjavahetust kui tõendit *moraalsest* pankrotist.
+* *Simplify for the layperson:* Compare Smart-ID to a physical ID card. The physical card requires you to be present. Smart-ID allows a criminal to stand between you and the bank (Man-in-the-Middle) because the app doesn't check *where* the request comes from, only *who* is holding the phone.
+* **The Proof:** Reference the **OutSmart-ID PoC** (Proof of Concept) which demonstrated full session compromise. Mention that this is not a theoretical bug, but the standard operating procedure for current fraud farms.
 
-* **Strateegia:** Ära ütle lihtsalt "süsteem on haavatav". Ütle: "Nad teadsid, et see on haavatav, ja otsustasid raha säästa." See muudab tehnilise debati eetikadebatiks, mis kõnetab laiemat lugejaskonda.
+### IV. Evidence Layer B: The Conflict of Interest (300 words)
 
-### Samm 3: Monopoli kaardi mängimine
+* **Follow the Money:** Who owns SK ID Solutions? Swedbank, SEB, and Luminor.
+* **The Cartel Argument:** The banks save money by pushing Smart-ID (cheaper than maintaining hardware tokens or SMS).
+* **The Liability Shield:** Because the banks own the auth provider, they can define the security standards. They have created a system where they profit from the volume/speed of transactions but shift 100% of the liability for the inevitable fraud onto the customer.
+* **The Contrast:** Highlight that LHV is the only bank attempting code-matching, while others reject improvements like "Smart-ID+ QR" for "competitiveness."
 
-Eesti lugeja on tundlik monopolide suhtes (elektrilevi, pangad).
+### V. Counter-Arguments & Rebuttals (200 words)
 
-* **Strateegia:** Maali SK ID Solutionsist pilt kui puutumatust valitsejast, kes dikteerib reegleid. "Miks nad peaksid midagi muutma, kui teil pole kuhugi mujale minna?" See tekitab lugejas viha ja mobiliseerib avalikku arvamust.
+* *Objection:* "But adding security makes it hard to use."
+* *Rebuttal:* False. **FIDO2 / WebAuthn** (used by Apple, Google, and modern fintech) is *easier* (biometric) and cryptographically binds the session. Estonia is lagging behind, not leading.
+* *Objection:* "Users should just read the control codes."
+* *Rebuttal:* The "Control Code" is security theater. It relies on human vigilance, which fails 5% of the time. Security engineering demands systems that protect users even when they are tired or distracted.
 
-### Samm 4: "Suitsev püstol" (The Smoking Gun)
+### VI. Conclusion: The Ultimatum (150 words)
 
-Kasuta 5. detsembri 2025 kirjavahetust maksimaalse efektiga.
+* **Call to Action:** The regulatory bodies (RIA, TTJA) must issue a **precept** (ettekirjutus).
+* **Specific Demand:** Smart-ID must enforce **context-binding** (linking the app to the browser session) within 6 months, or lose its "Qualified Signature" status.
+* **Final Thought:** "We cannot call ourselves a digital society if our digital keys are designed to be stolen. It is time to fix the lock."
 
-* **Taktika:** Paiguta see artikli esimesse kolmandikku. See on sinu "scoop" või uudisväärtus. See muudab artikli pelgast arvamusest uurivaks ajakirjanduseks. Tsiteeri täpselt: *"oleme seda riski teadlikult aktsepteerinud"*.
+---
 
-### Samm 5: Lahenduse nõudmine regulaatorilt, mitte turult
+## 4. Authority & Pitching Strategy
 
-Kuna SK on monopol, siis turg (nõudlus/pakkumine) ei paranda olukorda.
+**The Persona:** You are an investigative analyst or a cybersecurity advocate. You represent the *technical truth*, not a political party.
 
-* **Strateegia:** Pöördu otse RIA poole. See annab loole riikliku julgeoleku mõõtme. Smart-ID ei ole lihtsalt äpp, see on e-riigi "pass". Kui pass on võltsitav, on riik ohus.
+**The Pitch Email (Draft for Postimees/ERR):**
 
-### Soovitatavad andmed ja tõendid lünkade täitmiseks
+> **Subject:** EXCLUSIVE: Evidence that Smart-ID architects "consciously accepted" fraud vulnerabilities
+>
+> **Dear [Editor's Name - e.g., Martin Šmutov at Postimees],**
+>
+> Estonia is in the midst of a banking fraud crisis, with millions lost annually. The prevailing narrative blames "stupid users."
+>
+> I have compiled an investigative analysis based on technical documentation and internal admissions indicating that **SK ID Solutions knowingly designed Smart-ID without "origin binding"**—a critical security feature—to prioritize convenience. They effectively "consciously accepted" the risk of the exact type of attacks (MitM) we are seeing today.
+>
+> This Op-Ed argues that:
+>
+> 1. The fraud epidemic is an architectural failure, not a user failure.
+> 2. The owners of SK (Swedbank, SEB) are conflicted, as they profit from the system while shifting liability to victims.
+> 3. RIA has the power to stop this by mandating FIDO2 standards but has remained passive.
+>
+> This piece is exclusive to [Publication Name]. It includes technical references and a clear call to action for the Ministry of Economic Affairs.
+>
+> I am available to discuss the evidence layers.
+>
+> Best regards,
+> [Your Name]
+> [Your Credentials/Affiliation]
 
-1. **Pettuste statistika (2025/2026):** Leia viimased numbrid PPA-st või RIA aastaraamatust, et illustreerida probleemi ulatust (nt "Eestlased kaotasid X miljonit").
-2. **Tehniline võrdlus:** Too näide, kuidas Apple/Google Passkeys või FIDO2 riistvaravõtmed (YubiKey) välistavad selle rünnaku täielikult, tõestades, et tehnoloogia on olemas.
-3. **CVE kirje:** Viita konkreetsele CVE numbrile (kui on olemas või fiktiivne drafti kontekstis), et lisada usaldusväärsust.
+---
+
+## 5. Legal Considerations (Estonia Specific)
+
+*Disclaimer: I am an AI, not an attorney. The following is based on general Estonian media law principles.*
+
+1. **Defamation (Laim):** Under Estonian law (Võlaõigusseadus), you are liable if you publish false factual assertions that damage reputation.
+    * *Strategy:* Distinguish between **fact** and **value judgment**.
+    * *Safe:* "SK ID Solutions decided not to implement origin binding, a decision which security experts agree facilitates relay attacks." (Fact/Expert Opinion).
+    * *Unsafe:* "SK ID Solutions is helping criminals steal money." (Criminal accusation without verdict).
+2. **Reliance on Documents:** When claiming they "consciously accepted risk," you must have the document/email to back it up. If quoted, ensure the context is preserved.
+3. **Public Interest Defense:** Estonia has strong protections for journalism serving the public interest. Discussing the security of national infrastructure (Smart-ID) is arguably the highest level of public interest.
+4. **Right of Reply:** Ethical journalism in Estonia requires giving the accused party a chance to comment. Expect the editor to contact SK ID Solutions for a comment before publishing. Be ready for this.
+
+---
+
+## 6. Pre-Submission Checklist
+
+Before hitting send, ensure the piece passes this "sanity check":
+
+* [ ] **The "Grandma Test":** Can a non-technical person understand *why* the money was stolen? (Did you explain Man-in-the-Middle simply?)
+* [ ] **Source Verification:** Do you have the specific date/sender for the "consciously accepted risk" email? (Editors will ask).
+* [ ] **Tone Check:** Is the anger channeled into constructive policy demands? (Remove all exclamation marks).
+* [ ] **No Libel:** Have you removed any accusations of criminal intent? (Focus on *negligence* and *incompetence*, not malice).
+* [ ] **Solution Focused:** Does the article end with a specific technical demand (FIDO2/Context Binding) rather than just complaining?
+* [ ] **Estonian Context:** Have you referenced RIA (State Information System Authority) and TTJA (Consumer Protection)? These are the specific bodies that need to be provoked.
