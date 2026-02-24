@@ -18,7 +18,7 @@
 
 ## Repository Structure
 
-This repository contains comprehensive research on Smart-ID security vulnerabilities, architectural flaws, and strategic analysis. The content has been organized into logical categories for better discoverability and reduced redundancy.
+This repository contains research on Smart-ID security vulnerabilities, architectural flaws, and strategic analysis. The content has been organized into thematic categories.
 
 ### 📁 Directory Structure
 
@@ -50,7 +50,7 @@ This repository contains comprehensive research on Smart-ID security vulnerabili
 ### 01-core-analysis/
 **Main Security Research**
 
-- **smartid-security-research.md** - Comprehensive analysis of Smart-ID+ vulnerabilities, architectural flaws, phishing attack vectors (QRLJacking), and the "OutSmart-ID" offensive framework. Includes technical gap analysis against modern standards (FIDO2, NIST SP 800-63-4, eIDAS 2.0).
+- **smartid-security-research.md** - Analysis of Smart-ID+ vulnerabilities, architectural flaws, phishing attack vectors (QRLJacking), and the "OutSmart-ID" offensive framework. Includes technical gap analysis against modern standards (FIDO2, NIST SP 800-63-4, eIDAS 2.0).
 
 ### 02-opinion-editorials/
 **Opinion Pieces & Editorial Content**
