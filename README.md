@@ -1,47 +1,51 @@
-# Smart-ID Security Research of electronic identification security
+# 🚨 Smart-ID Security Research 🚨
 
-A technical analysis in the context of Estonian digital identity infrastructure.
-
----
-
-## Overview
-
-This repository contains security research examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. The research focuses on technical analysis of Smart-ID as a case study for examining broader questions in trust service provider security.
-
----
-
-## Research Focus Areas
-
-### Technical Analysis
-- Cryptographic origin binding in cross-device authentication flows
-- QR-based authentication security models
-- Comparison with FIDO2/WebAuthn standards
-- Man-in-the-middle attack vectors in out-of-band authentication
-
-### Regulatory Framework
-- eIDAS Regulation (EU) 910/2014 compliance requirements
-- NIST SP 800-63-4 authentication assurance levels
-- GDPR data protection obligations for trust service providers
-- Estonian EUTS implementation requirements
-
-### Strategic Considerations
-- Migration paths from proprietary authentication to standards-based solutions
-- Public awareness effectiveness in fraud mitigation
-- Liability frameworks for relying parties
+<div align="center">
+  <a href="https://tomkabel.github.io/skid-security-research/">
+    <img src="https://img.shields.io/badge/View-Documentation-brightgreen?style=for-the-badge&logo=github" alt="View Documentation" />
+  </a>
+  <br/><br/>
+  <a href="https://github.com/tomkabel/skid-security-research">
+    <img src="https://img.shields.io/github/stars/tomkabel/skid-security-research?style=social" alt="GitHub Stars" />
+  </a>
+  <a href="https://github.com/tomkabel/skid-security-research">
+    <img src="https://img.shields.io/github/forks/tomkabel/skid-security-research?style=social" alt="GitHub Forks" />
+  </a>
+  <a href="https://github.com/tomkabel/skid-security-research">
+    <img src="https://img.shields.io/github/watchers/tomkabel/skid-security-research?style=social" alt="GitHub Watchers" />
+  </a>
+</div>
 
 ---
 
-## Documentation Website
+## 🔍 Research Overview
 
-This research project includes a documentation website built with **VitePress**, hosted on GitHub Pages.
+This repository contains **independent security research** examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. The research uses **Smart-ID** as a case study for analyzing broader questions in trust service provider security.
 
-### Viewing the Research
+### 🎯 Focus Areas
 
-The documentation is available at: `https://[username].github.io/[repo-name]/`
+- **Cryptographic origin binding** in cross-device authentication flows
+- **QR-based authentication** security models and attack vectors
+- **FIDO2/WebAuthn** standards comparison and alignment
+- **Man-in-the-middle** vulnerabilities in out-of-band authentication
+- **eIDAS & GDPR** regulatory compliance frameworks
+- **Migration paths** from proprietary to standards-based solutions
 
-### Local Development
+---
 
-To run the documentation site locally:
+## 📚 Documentation Website
+
+This project includes a full documentation website built with **VitePress**, automatically deployed to **GitHub Pages**.
+
+### 🌐 Access the Research
+
+<a href="https://tomkabel.github.io/skid-security-research/" target="_blank">
+  <img src="https://img.shields.io/badge/Read-Live-Documentation-blueviolet?style=for-the-badge&logo=read-the-docs" alt="Live Documentation" />
+</a>
+
+**View the complete research online** → [https://tomkabel.github.io/skid-security-research/](https://tomkabel.github.io/skid-security-research/)
+
+### 💻 Local Development
 
 ```bash
 cd docs
@@ -49,7 +53,7 @@ npm install
 npm run dev
 ```
 
-### Building for Production
+### 🏗️ Production Build
 
 ```bash
 cd docs
@@ -58,17 +62,17 @@ npm run build
 
 The built site will be in `docs/.vitepress/dist/`.
 
-### Deployment
+### 🚀 Deployment
 
-The site automatically deploys to GitHub Pages via GitHub Actions on push to main.
+The documentation automatically deploys to GitHub Pages via GitHub Actions on every push to `main`.
 
 ---
 
-## Repository Structure
+## 🗂️ Repository Structure
 
 ```
 .
-├── docs/                         # Documentation website (VitePress)
+├── docs/                         # VitePress documentation website
 │   ├── .vitepress/
 │   │   └── config.ts            # VitePress configuration
 │   ├── core-analysis/           # Primary research documents
@@ -89,7 +93,7 @@ The site automatically deploys to GitHub Pages via GitHub Actions on push to mai
 
 ---
 
-## Key Findings
+## 🔐 Key Findings
 
 ### Authentication Security
 
@@ -103,9 +107,9 @@ The research examines how cross-device authentication flows handle cryptographic
 
 Comparison with established standards reveals areas where current implementations may diverge from industry best practices:
 
-- FIDO2/WebAuthn provides cryptographic origin binding at the protocol level
-- NIST SP 800-63-4 defines phishing resistance requirements for Authenticator Assurance Level 3
-- eIDAS Article 24 requires trust service providers to use trustworthy systems
+- **FIDO2/WebAuthn** provides cryptographic origin binding at the protocol level
+- **NIST SP 800-63-4** defines phishing resistance requirements for Authenticator Assurance Level 3
+- **eIDAS Article 24** requires trust service providers to use trustworthy systems
 
 ### Regulatory Considerations
 
@@ -117,7 +121,7 @@ Relevant regulatory instruments include:
 
 ---
 
-## Recommendations
+## 💡 Recommendations
 
 ### For Service Providers
 
@@ -133,7 +137,7 @@ Relevant regulatory instruments include:
 
 ---
 
-## Methodology
+## 🔬 Methodology
 
 The research employs standard security analysis methodologies including:
 
@@ -143,7 +147,7 @@ The research employs standard security analysis methodologies including:
 
 ---
 
-## References
+## 📚 References
 
 - NIST SP 800-63-4 (Digital Identity Guidelines)
 - FIDO Alliance Phishing-Resistant Authentication Standards
@@ -152,29 +156,32 @@ The research employs standard security analysis methodologies including:
 
 ---
 
-## Licensing
-
-This repository uses dual licensing to appropriately cover different types of content:
+## 🔗 Licensing
 
 ### Research Content (CC-BY-4.0)
-All research documents, analysis, and written content in this repository are licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE). This license allows anyone to:
-- Share — copy and redistribute the material in any medium or format
-- Adapt — remix, transform, and build upon the material for any purpose, even commercially
-- With proper attribution to the original work
+
+All research documents, analysis, and written content are licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE). This allows sharing, adapting, and commercial use with proper attribution.
 
 ### Code Components (MIT)
-The documentation website build system and configuration files (located in `docs/`) are licensed under the [MIT License](docs/LICENSE). This permissive license allows maximum reuse of the technical implementation.
+
+The documentation website build system and configuration files (located in `docs/`) are licensed under the [MIT License](docs/LICENSE).
 
 ### Third-Party Materials
-Any third-party code, research papers, or materials included in this repository maintain their original licenses. Please refer to individual files or subdirectories for specific licensing information.
+
+Any third-party code, research papers, or materials included in this repository maintain their original licenses.
 
 ---
 
-## Disclaimer
+## 📋 Disclaimer
 
-This research is provided for educational and informational purposes. All findings have been disclosed through appropriate responsible disclosure channels.
+This research is provided for **educational and informational purposes only**. All findings have been disclosed through appropriate responsible disclosure channels.
 
 ---
 
-**Security Researcher**  
-*This repository represents independent security research.*
+## 👨‍💻 Security Researcher
+
+This repository represents **independent security research** by Tom Kabel.
+
+<div align="center">
+  <strong>Made with ❤️ for the security community</strong>
+</div>
