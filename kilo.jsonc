@@ -1,0 +1,152 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "permission": {
+    "todowrite": "allow",
+    "webfetch": "allow",
+    "external_directory": {
+      "*": "allow",
+      "/etc/*": "allow",
+      "/run/systemd/resolve/*": "allow",
+      "/home/tomkabel/*": "allow",
+    },
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "edit": "allow",
+    "bash": "allow",
+    "skill": "allow",
+    "task": "allow",
+  },
+  "mcp": {
+    "stealth-browser-mcp": {
+      "type": "local",
+      "command": [
+        "/home/tomkabel/Documents/stealth-browser-mcp/.venv/bin/python",
+        "/home/tomkabel/Documents/stealth-browser-mcp/src/server.py",
+      ],
+      "environment": {
+        "BROWSER_IDLE_TIMEOUT": "600",
+        "BROWSER_IDLE_REAPER_INTERVAL": "60",
+        "STEALTH_BROWSER_DEBUG": "0",
+      },
+      "enabled": true,
+    },
+    "sequentialthinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "timeout": 30000,
+    },
+    "memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+    },
+    "filesystem": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "/home/tomkabel/Documents"],
+      "enabled": true,
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "${CONTEXT7_API_KEY}"],
+      "environment": {
+        "DEFAULT_MINIMUM_TOKENS": "",
+      },
+      "timeout": 30000,
+    },
+    "exa": {
+      "type": "local",
+      "command": ["npx", "-y", "exa-mcp-server"],
+      "environment": {
+        "EXA_API_KEY": "${EXA_API_KEY}",
+      },
+    },
+    "git": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-git"],
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}",
+      },
+    },
+    "tavily": {
+      "type": "local",
+      "command": ["npx", "-y", "tavily-mcp@0.2.3"],
+      "environment": {
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}",
+      },
+    },
+  },
+  "mode": {
+    "build": {
+      "description": "Default agent for building and implementing code solutions",
+      "steps": 100,
+    },
+    "plan": {
+      "description": "Agent for planning and architecture decisions",
+      "steps": 50,
+    },
+    "code-skeptic": {
+      "prompt": "You are Kilo Code, a SKEPTICAL and CRITICAL code quality inspector who questions EVERYTHING. Your job is to challenge any Agent when they claim \"everything is good\" or skip important steps. You are the voice of doubt that ensures nothing is overlooked.\n\nYou will:\n- Question assumptions and challenge status quo\n- Identify potential blind spots in implementations\n- Demand evidence for \"it works\" claims\n- Push back against shortcuts that compromise quality\n- Find the weaknesses in proposed solutions",
+      "description": "Skeptical inspector who questions everything and ensures nothing is overlooked",
+      "mode": "all",
+      "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "bash": "allow",
+        "skill": "allow",
+      },
+    },
+    "code-reviewer": {
+      "prompt": "You are a senior software engineer conducting thorough code reviews. You focus on code quality, security, performance, and maintainability.\n\nProvide constructive feedback on code patterns, potential bugs, security issues, and improvement opportunities. Be specific and actionable in suggestions.",
+      "description": "Senior engineer providing detailed code review feedback on quality, security, and performance",
+      "mode": "all",
+      "permission": {
+        "read": "allow",
+        "bash": "allow",
+        "edit": "allow",
+        "skill": "deny",
+      },
+    },
+    "code-simplifier": {
+      "prompt": "You are Kilo Code, an expert refactoring specialist dedicated to making code clearer, more concise, and easier to maintain. Your core principle is to improve code quality without changing its externally observable behavior or public APIs UNLESS explicitly authorized by the user.\n\n**Your Refactoring Methodology:**",
+      "description": "Expert refactoring specialist for clarifying and simplifying code",
+      "mode": "all",
+      "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "bash": "allow",
+        "skill": "allow",
+      },
+    },
+    "test-engineer": {
+      "prompt": "You are a QA engineer and testing specialist focused on writing comprehensive tests, debugging failures, and improving code coverage.\n\nPrioritize test readability, comprehensive edge cases, and clear assertion messages. Always consider both happy path and error scenarios.",
+      "description": "QA engineer writing comprehensive tests and improving code coverage",
+      "mode": "all",
+      "permission": {
+        "read": "allow",
+        "bash": "allow",
+        "edit": "allow",
+        "skill": "deny",
+      },
+    },
+    "docs-specialist": {
+      "prompt": "You are a technical writing expert specializing in clear, comprehensive documentation. You excel at explaining complex concepts simply and creating well-structured docs.\n\nFocus on clarity, proper formatting, and comprehensive examples. Always check for broken links and ensure consistency in tone and style.",
+      "description": "Technical writer creating clear, well-structured documentation",
+      "mode": "all",
+      "permission": {
+        "read": "allow",
+        "bash": "allow",
+        "edit": "allow",
+        "skill": "deny",
+      },
+    },
+  },
+  "model": "openrouter/minimax/minimax-m2.5",
+  "default_agent": "build",
+  "snapshot": true,
+  "autoupdate": "notify",
+}

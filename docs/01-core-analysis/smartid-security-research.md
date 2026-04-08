@@ -92,7 +92,7 @@ Relevant regulatory instruments include:
 - **GDPR Articles 25 & 32**: Data protection by design and security obligations
 - **Estonian EUTS**: National eIDAS implementation
 
-See [`07-regulatory-reference/laws-acts-regulations.md`](07-regulatory-reference/laws-acts-regulations.md) for comprehensive regulatory reference.
+See [`07-regulatory-reference/laws-acts-regulations.md`](../07-regulatory-reference/laws-acts-regulations.md) for comprehensive regulatory reference.
 
 ---
 

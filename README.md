@@ -31,15 +31,59 @@ This repository contains security research examining authentication architecture
 
 ---
 
+## Documentation Website
+
+This research project includes a documentation website built with **VitePress**, hosted on GitHub Pages.
+
+### Viewing the Research
+
+The documentation is available at: `https://[username].github.io/[repo-name]/`
+
+### Local Development
+
+To run the documentation site locally:
+
+```bash
+cd docs
+npm install
+npm run dev
+```
+
+### Building for Production
+
+```bash
+cd docs
+npm run build
+```
+
+The built site will be in `docs/.vitepress/dist/`.
+
+### Deployment
+
+The site automatically deploys to GitHub Pages via GitHub Actions on push to main.
+
+---
+
 ## Repository Structure
 
 ```
 .
-├── 01-core-analysis/              # Primary technical research
-├── 02-opinion-editorials/         # External analysis and commentary
-├── 03-technical-analysis/         # Implementation guidance
-├── 04-supplementary-research/     # Supporting research materials
-├── 07-regulatory-reference/       # Laws, acts, and regulations
+├── docs/                         # Documentation website (VitePress)
+│   ├── .vitepress/
+│   │   └── config.ts            # VitePress configuration
+│   ├── core-analysis/           # Primary research documents
+│   ├── technical-analysis/      # Security measures and vulnerabilities
+│   ├── supplementary-research/  # Supporting research papers
+│   ├── opinion-editorials/      # Editorials and expert opinions
+│   ├── regulatory-reference/    # Legal and regulatory materials
+│   ├── archived/               # Historical documents and summaries
+│   ├── index.md                # Home page
+│   └── package.json
+├── docs/01-core-analysis/            # Primary technical research (source)
+├── docs/02-opinion-editorials/       # External analysis and commentary (source)
+├── docs/03-technical-analysis/       # Implementation guidance (source)
+├── docs/04-supplementary-research/   # Supporting research materials (source)
+├── docs/07-regulatory-reference/     # Laws, acts, and regulations (source)
 └── README.md
 ```
 
@@ -105,6 +149,24 @@ The research employs standard security analysis methodologies including:
 - FIDO Alliance Phishing-Resistant Authentication Standards
 - eIDAS 2.0 / EUDI Wallet Architecture Reference Framework
 - ENISA Cybersecurity Guidelines for Trust Services
+
+---
+
+## Licensing
+
+This repository uses dual licensing to appropriately cover different types of content:
+
+### Research Content (CC-BY-4.0)
+All research documents, analysis, and written content in this repository are licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE). This license allows anyone to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially
+- With proper attribution to the original work
+
+### Code Components (MIT)
+The documentation website build system and configuration files (located in `docs/`) are licensed under the [MIT License](docs/LICENSE). This permissive license allows maximum reuse of the technical implementation.
+
+### Third-Party Materials
+Any third-party code, research papers, or materials included in this repository maintain their original licenses. Please refer to individual files or subdirectories for specific licensing information.
 
 ---
 
