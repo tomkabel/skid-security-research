@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'SKID Security Research',
   description: 'Estonia Cyber Fraud Evolution Analysis - Smart-ID Security Research',
   lang: 'en-US',
-  base: '/skid-security-research/',
+  base: '/',
 
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
