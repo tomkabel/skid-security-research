@@ -1,51 +1,43 @@
-# 🚨 Smart-ID Security Research 🚨
+# Smart-ID Security Research
 
 <div align="center">
-  <a href="https://tomkabel.github.io/skid-security-research/">
-    <img src="https://img.shields.io/badge/View-Documentation-brightgreen?style=for-the-badge&logo=github" alt="View Documentation" />
-  </a>
-  <br/><br/>
-  <a href="https://github.com/tomkabel/skid-security-research">
-    <img src="https://img.shields.io/github/stars/tomkabel/skid-security-research?style=social" alt="GitHub Stars" />
-  </a>
-  <a href="https://github.com/tomkabel/skid-security-research">
-    <img src="https://img.shields.io/github/forks/tomkabel/skid-security-research?style=social" alt="GitHub Forks" />
-  </a>
-  <a href="https://github.com/tomkabel/skid-security-research">
-    <img src="https://img.shields.io/github/watchers/tomkabel/skid-security-research?style=social" alt="GitHub Watchers" />
-  </a>
+
+[![View Documentation](https://img.shields.io/badge/View-Documentation-brightgreen?style=for-the-badge&logo=github)](https://tomkabel.github.io/skid-security-research/)
+[![Live Documentation](https://img.shields.io/badge/Live-Documentation-blueviolet?style=for-the-badge&logo=read-the-docs)](https://tomkabel.github.io/skid-security-research/)
+
+[![GitHub Stars](https://img.shields.io/github/stars/tomkabel/skid-security-research?style=for-the-badge)](https://github.com/tomkabel/skid-security-research/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/tomkabel/skid-security-research?style=for-the-badge)](https://github.com/tomkabel/skid-security-research/network/members)
+[![License: CC-BY-4.0](https://img.shields.io/badge/License-CC--BY--4.0-blue?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](docs/LICENSE)
+
 </div>
 
 ---
 
-## 🔍 Research Overview
+## Research Overview
 
-This repository contains **independent security research** examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. The research uses **Smart-ID** as a case study for analyzing broader questions in trust service provider security.
+This repository contains independent security research examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. The research uses Smart-ID as a case study for analyzing broader questions in trust service provider security.
 
-### 🎯 Focus Areas
+### Focus Areas
 
-- **Cryptographic origin binding** in cross-device authentication flows
-- **QR-based authentication** security models and attack vectors
-- **FIDO2/WebAuthn** standards comparison and alignment
-- **Man-in-the-middle** vulnerabilities in out-of-band authentication
-- **eIDAS & GDPR** regulatory compliance frameworks
-- **Migration paths** from proprietary to standards-based solutions
+- Cryptographic origin binding in cross-device authentication flows
+- QR-based authentication security models and attack vectors
+- FIDO2/WebAuthn standards comparison and alignment
+- Man-in-the-middle vulnerabilities in out-of-band authentication
+- eIDAS and GDPR regulatory compliance frameworks
+- Migration paths from proprietary to standards-based solutions
 
 ---
 
-## 📚 Documentation Website
+## Documentation Website
 
-This project includes a full documentation website built with **VitePress**, automatically deployed to **GitHub Pages**.
+The project includes a full documentation website built with VitePress, automatically deployed to GitHub Pages.
 
-### 🌐 Access the Research
+### Access the Research
 
-<a href="https://tomkabel.github.io/skid-security-research/" target="_blank">
-  <img src="https://img.shields.io/badge/Read-Live-Documentation-blueviolet?style=for-the-badge&logo=read-the-docs" alt="Live Documentation" />
-</a>
+**Live Documentation**: [https://tomkabel.github.io/skid-security-research/](https://tomkabel.github.io/skid-security-research/)
 
-**View the complete research online** → [https://tomkabel.github.io/skid-security-research/](https://tomkabel.github.io/skid-security-research/)
-
-### 💻 Local Development
+### Local Development
 
 ```bash
 cd docs
@@ -53,7 +45,7 @@ npm install
 npm run dev
 ```
 
-### 🏗️ Production Build
+### Production Build
 
 ```bash
 cd docs
@@ -62,13 +54,13 @@ npm run build
 
 The built site will be in `docs/.vitepress/dist/`.
 
-### 🚀 Deployment
+### Deployment
 
 The documentation automatically deploys to GitHub Pages via GitHub Actions on every push to `main`.
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 .
@@ -80,20 +72,16 @@ The documentation automatically deploys to GitHub Pages via GitHub Actions on ev
 │   ├── supplementary-research/  # Supporting research papers
 │   ├── opinion-editorials/      # Editorials and expert opinions
 │   ├── regulatory-reference/    # Legal and regulatory materials
-│   ├── archived/               # Historical documents and summaries
-│   ├── index.md                # Home page
+│   ├── archived/                # Historical documents and summaries
+│   ├── index.md                 # Home page
 │   └── package.json
-├── docs/01-core-analysis/            # Primary technical research (source)
-├── docs/02-opinion-editorials/       # External analysis and commentary (source)
-├── docs/03-technical-analysis/       # Implementation guidance (source)
-├── docs/04-supplementary-research/   # Supporting research materials (source)
-├── docs/07-regulatory-reference/     # Laws, acts, and regulations (source)
+├── LICENSE                       # CC-BY-4.0 license for research content
 └── README.md
 ```
 
 ---
 
-## 🔐 Key Findings
+## Key Findings
 
 ### Authentication Security
 
@@ -116,12 +104,12 @@ Comparison with established standards reveals areas where current implementation
 Relevant regulatory instruments include:
 
 - **eIDAS Regulation**: Requirements for qualified trust service providers
-- **GDPR Articles 25 & 32**: Data protection by design and security of processing
+- **GDPR Articles 25 and 32**: Data protection by design and security of processing
 - **Estonian EUTS**: National implementation of eIDAS requirements
 
 ---
 
-## 💡 Recommendations
+## Recommendations
 
 ### For Service Providers
 
@@ -137,7 +125,7 @@ Relevant regulatory instruments include:
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 The research employs standard security analysis methodologies including:
 
@@ -147,7 +135,7 @@ The research employs standard security analysis methodologies including:
 
 ---
 
-## 📚 References
+## References
 
 - NIST SP 800-63-4 (Digital Identity Guidelines)
 - FIDO Alliance Phishing-Resistant Authentication Standards
@@ -156,7 +144,7 @@ The research employs standard security analysis methodologies including:
 
 ---
 
-## 🔗 Licensing
+## Licensing
 
 ### Research Content (CC-BY-4.0)
 
@@ -172,16 +160,12 @@ Any third-party code, research papers, or materials included in this repository 
 
 ---
 
-## 📋 Disclaimer
+## Disclaimer
 
-This research is provided for **educational and informational purposes only**. All findings have been disclosed through appropriate responsible disclosure channels.
+This research is provided for educational and informational purposes only. All findings have been disclosed through appropriate responsible disclosure channels.
 
 ---
 
-## 👨‍💻 Security Researcher
+## Security Researcher
 
-This repository represents **independent security research** by Tom Kabel.
-
-<div align="center">
-  <strong>Made with ❤️ for the security community</strong>
-</div>
+This repository represents independent security research by Tom Kabel.
