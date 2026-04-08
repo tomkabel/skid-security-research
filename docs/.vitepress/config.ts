@@ -8,9 +8,9 @@ export default defineConfig({
   base: '/skid-security-research',
 
   head: [
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1' }],
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale:1' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
   ],
 
   themeConfig: {
@@ -18,11 +18,13 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Core Analysis', link: '/core-analysis/' },
-      { text: 'Technical Analysis', link: '/technical-analysis/' },
-      { text: 'Research', link: '/supplementary-research/' },
-      { text: 'Editorials', link: '/opinion-editorials/' },
-      { text: 'Reference', link: '/regulatory-reference/' }
+      { text: 'Core Research', link: '/01-core-research/' },
+      { text: 'Technical Security', link: '/02-technical-security/' },
+      { text: 'Regulatory Framework', link: '/03-regulatory-framework/' },
+      { text: 'Memoranda', link: '/04-regulatory-memoranda/' },
+      { text: 'Enforcement', link: '/05-enforcement/' },
+      { text: 'Supplementary', link: '/06-supplementary-research/' },
+      { text: 'Opinion', link: '/07-opinion-editorials/' }
     ],
 
     sidebar: generateSidebar({

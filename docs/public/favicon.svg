@@ -1,0 +1,28 @@
+#!/bin/bash
+# This is a placeholder - I'll create a proper multi-resolution favicon
+# Since creating a proper .ico file requires specific tools, I'll create a simple SVG that can be converted to .ico
+# For now, I'll create a simple SVG favicon that can be used directly or converted
+
+echo "Creating favicon.svg..."
+cat > /home/tomkabel/Documents/skid-security-research/docs/public/favicon.svg << 'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5be0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simplified shield for favicon -->
+  <path d="M32,4 L56,26 L56,50 Q56,78 32,78 Q8,78 8,50 L8,26 Z" 
+        fill="url(#grad1)" 
+        stroke="#1a4792" 
+        stroke-width="2" />
+  
+  <!-- Small initials -->
+  <text x="32" y="48" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" style="letter-spacing: 1px;">SK</text>
+</svg>
+EOF
+
+echo "Favicon SVG created. For a .ico file, you can convert this SVG using:"
+echo "  convert favicon.svg favicon.ico"

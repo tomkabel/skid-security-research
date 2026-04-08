@@ -25,27 +25,31 @@ Visit `http://localhost:5173` to view the documentation during development.
 ```
 .
 ├── .vitepress/
-│   └── config.ts          # VitePress configuration
-├── core-analysis/         # Primary research documents
-├── technical-analysis/    # Security measures and vulnerabilities
-├── supplementary-research/ # Supporting research papers
-├── opinion-editorials/    # Editorials and expert opinions
-├── regulatory-reference/  # Legal and regulatory materials
-├── archived/             # Historical documents and summaries
-├── index.md              # Home page
+│   └── config.ts              # VitePress configuration
+├── 01-core-research/          # Primary research documents
+├── 02-technical-security/     # Security measures and vulnerabilities
+├── 03-regulatory-framework/   # Laws, acts, and regulations
+├── 04-regulatory-memoranda/   # Formal memoranda to authorities
+├── 05-enforcement/            # Regulatory enforcement analysis
+├── 06-supplementary-research/ # Supporting research papers
+├── 07-opinion-editorials/     # Editorials and expert opinions
+├── public/                    # Static assets (logos, favicons)
+├── index.md                   # Home page
+├── README.md                  # This file
 └── package.json
 ```
 
 ## Content Organization
 
-The documentation is organized into several main sections:
+The documentation is organized into several main sections (numbered for logical ordering):
 
-- **Core Analysis**: Primary research examining Smart-ID security architecture
-- **Technical Analysis**: Security measures and implementation guidance
-- **Supplementary Research**: Supporting documents, enforcement strategies, regulatory analysis
-- **Opinion & Editorials**: Expert perspectives and editorial analysis
-- **Regulatory Reference**: Laws, acts, and regulatory frameworks
-- **Archived**: Historical documents and reorganization summaries
+1. **Core Research** (`01-core-research/`): Primary research examining Smart-ID security architecture
+2. **Technical Security** (`02-technical-security/`): Security measures and vulnerability assessments
+3. **Regulatory Framework** (`03-regulatory-framework/`): Laws, acts, and regulatory standards
+4. **Regulatory Memoranda** (`04-regulatory-memoranda/`): Formal memoranda submitted to Estonian authorities (RIA, TTJA, AKI)
+5. **Enforcement** (`05-enforcement/`): Regulatory enforcement strategy and analysis
+6. **Supplementary Research** (`06-supplementary-research/`): Supporting documents, fraud evolution analysis
+7. **Opinion & Editorials** (`07-opinion-editorials/`): Expert perspectives and editorial analysis
 
 Each section has its own directory with markdown files that automatically appear in the sidebar navigation.
 
