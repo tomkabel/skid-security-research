@@ -323,24 +323,35 @@ Looking toward the remainder of 2026 and beyond, threat intelligence dictates th
 
 ## Sources and References
 
-- Estonian Information System Authority (RIA) - Cyber Security in Estonia 2025/2026
-- ERR News - Investigative reporting on phone scammers
-- SEB Bank - Baltic Fraud Statistics
-- e-Estonia Briefing Centre - AI and cybersecurity analysis
-- University of Tartu cybersecurity research
-- International law enforcement cooperation (EAST, Europol)
-- Investigative journalism (Pealtnägija, Äripäev)
-- Identity Theft in Consumer Finance: Consent, Contract and Liability - Scandinavian University Press
-- Creating Value For Users And Governments: How AI Can Enhance Digital-ID Solutions - iproov.com
-- What Is Social Engineering? - Arctic Wolf
-- Cyber Security in Estonia 2025 - RIA
-- Military Innovation and the Dynamic Implementation of Cyber Force Structure - SURFACE at Syracuse University
-- (PDF) The Estonian Cyberattacks - ResearchGate
-- Book - CCDCOE
-- 2021 Report on CSIRT-LE cooperation - ENISA
-- CYBER SECURITY IN ESTONIA 2024 - RIA
-- Estonia Cybersecurity Overview 2024 | PDF | Cyberwarfare | Security - Scribd
-- The Cyber Security Yearbook: the number of incidents doubled in a year - RIA
-- Russian-speaking Estonians: Bridging the Gap of Understanding - Helda - University of Helsinki
-- Report: Slow integration caused by segregating kids by language | News | ERR
-- The Evolution of Russian Hybrid Warfare in Ukraine and Georgia: A Comparative Study
+### Official Reports and Government Sources
+
+1. Estonian Information System Authority (RIA). *Cyber Security in Estonia 2025*. Tallinn: RIA, 2025. https://ria.ee/sites/default/files/documents/2025-02/Cyber-security-in-Estonia-2025.pdf
+2. Estonian Information System Authority (RIA). *Cyber Security in Estonia 2024*. Tallinn: RIA, 2024.
+3. Estonian Information System Authority (RIA). *The Cyber Security Yearbook: The Number of Incidents Doubled in a Year*. Tallinn: RIA, 2025.
+4. European Union Agency for Cybersecurity (ENISA). *2021 Report on CSIRT-LE Cooperation*. Athens: ENISA, 2021.
+5. NATO Cooperative Cyber Defence Centre of Excellence (CCDCOE). *The Estonian Cyberattacks*. Tallinn: CCDCOE.
+
+### Banking and Financial Industry
+
+6. SEB Bank. *Baltic Fraud Statistics 2024*. Stockholm: SEB, 2024.
+7. Arnis Paršovs. "Pangad ei kasuta Smart-ID õngitsusrünnete vastaseid meetmeid." *ERR*, January 2026. https://news.err.ee/1609910821/arnis-parsovs-banks-fail-to-implement-measures-against-smart-id-phishing
+8. Swedbank. "Estonia Seeing Unprecedented Fraud Pressure." *ERR*, December 2025. https://news.err.ee/1609892917/swedbank-estonia-seeing-unprecedented-fraud-pressure
+
+### Academic and Research Sources
+
+9. Paršovs, A. University of Tartu Cybersecurity Research Group. Various publications on Smart-ID security (2019-2026).
+10. University of Helsinki. *Russian-speaking Estonians: Bridging the Gap of Understanding*. Helsinki: Helda, University of Helsinki.
+11. *Identity Theft in Consumer Finance: Consent, Contract and Liability*. Scandinavian University Press.
+
+### Journalism and Investigative Reporting
+
+12. ERR News. Various investigative reports on phone scammers and cyber fraud (2020-2026).
+13. *Pealtnägija* (ERR investigative program). Reports on Smart-ID phishing cases (2021-2025).
+14. *Äripäev*. Business reporting on fraud losses and banking security (2023-2026).
+15. "Estonia's State Institutions Hit by Largest Cyberattack to Date." *Postimees*, March 2024. https://news.postimees.ee/7977286/estonia-s-state-institutions-hit-by-largest-cyberattack-to-date
+
+### Technology and Industry Analysis
+
+16. iProov. "Creating Value for Users and Governments: How AI Can Enhance Digital-ID Solutions." London: iProov, 2024.
+17. Arctic Wolf. "What Is Social Engineering?" Eden Prairie: Arctic Wolf Networks, 2024.
+18. iproov.com. AI and Digital Identity Analysis (2024).

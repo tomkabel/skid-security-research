@@ -22,6 +22,10 @@ This approach modernizes the UX (solving the phishing/notification bombing issue
 
 ---
 
+> **Currency Note:** This analysis was originally prepared in October 2023. The FIDO2/WebAuthn ecosystem has continued to mature since then, with increasing platform support and declining implementation costs. The core architectural proposal remains valid and has gained broader industry acceptance. The estimates should be validated against current vendor pricing.
+
+---
+
 ## 1. The Architectural Gap: Authentication vs. Qualified Signing
 
 To understand the complexity, we must distinguish between the two functions Smart-ID performs:
@@ -97,7 +101,7 @@ To achieve QES with a FIDO2 pivot, we must decouple the Authorization from the S
 | Notification Bombing | Vulnerable (Public ID Push) | Solved (QR Scan / Hybrid Transport) | FIDO2 |
 | QES Capability | Native (Split-Key) | Via Remote HSM (Cloud Signing) | Tie |
 | Cryptography | Proprietary (RSA Split) | Standard (P-256 / Ed25519) | FIDO2 |
-| Sole Control | User holds key share | User holds FIDO authorization key | Smart-ID |
+| Sole Control | Split-key (two parties must cooperate) | User holds FIDO authorization key (single party control) | FIDO2 |
 | Implementation Cost | N/A (Already built) | High (Requires HSM infrastructure) | Smart-ID |
 
 ---

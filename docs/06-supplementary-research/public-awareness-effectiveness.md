@@ -63,9 +63,10 @@ Not all educational interventions work equally well.
 
 Policymakers need to account for structural and psychological barriers that limit campaign success.
 
-* **Security Fatigue:** When users get bombarded with too many warnings, they experience cognitive exhaustion and start clicking through to get their task done.
-* **The "Forgetting Curve":** Without reinforcement, security knowledge decays rapidly. Training effects wear off significantly after 4–6 months—continuous micro-learning beats annual seminars.
-* **Adaptive Adversaries:** As awareness of "typos and bad grammar" improves, criminals have shifted to "Pig Butchering" (long-con investment fraud) and AI-driven social engineering (deepfake voice clones). ENISA warned in late 2025 that 80% of social engineering attacks now involve AI elements.
+* **Security Fatigue:** When users get bombarded with too many warnings, they experience cognitive exhaustion and start clicking through to get their task done. In Estonia, where citizens interact with e-services daily for banking, government, and healthcare, alert fatigue is a particularly acute risk.
+* **The "Forgetting Curve":** Without reinforcement, security knowledge decays rapidly. Training effects wear off significantly after 4–6 months—continuous micro-learning beats annual seminars. Estonia's annual Cyber Security Month campaigns need supplementation with year-round behavioral interventions.
+* **The Estonian Language Shield Collapse:** As documented in [Estonian Fraud Evolution](./estonian-fraud-evolution.md), AI-generated Estonian-language phishing has eliminated the historical linguistic protection that native speakers enjoyed. Awareness campaigns designed for the pre-2023 threat landscape are obsolete—citizens can no longer rely on linguistic red flags to identify fraud.
+* **Mobile-First Reality:** With over 70% of Estonian internet usage on mobile devices, awareness campaigns optimized for desktop email and browser warnings miss the primary attack surface. SMS and messaging app-based interventions are essential.
 
 ---
 

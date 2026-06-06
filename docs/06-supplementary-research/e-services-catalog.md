@@ -111,13 +111,28 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 | Service | URL | Authentication | Data Sensitivity |
 |---------|-----|---------------|-----------------|
 | **Politsei.ee Portal** | politsei.ee | Smart-ID, Mobile-ID, ID-card | HIGH |
-| **E-residency** | learn.e-resident.gov.ee | Digital ID card | MEDIUM |
 
 **Confidence:** HIGH
 
 **Incidents:**
 - Police arrested Tallinn resident for stealing 286,000 ID scans from government database (2021)
 - Estonian Citizenship Database breach affected Have I Been Pwned (2018)
+
+### 2.4 E-Residency Program
+
+| Service | URL | Authentication | Data Sensitivity |
+|---------|-----|---------------|-----------------|
+| **E-Residency Portal** | e-resident.gov.ee | ID-card, Smart-ID | CRITICAL (Identity + Business) |
+| **E-Residency Digital ID** | N/A | Hardware smart card | CRITICAL |
+
+**Confidence:** HIGH
+
+**Notes:**
+- Estonia's e-residency program issues digital identities to non-residents, enabling cross-border business and digital signatures
+- Over 100,000 e-residents from 170+ countries as of 2025
+- E-resident digital IDs use the same PKI infrastructure as domestic ID cards
+- E-residents are vulnerable to the same Smart-ID phishing vectors as domestic users when using Smart-ID for authentication
+- The program represents a unique attack surface: identity theft of e-residents has implications across multiple jurisdictions
 
 ---
 
@@ -196,7 +211,7 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 | Provider | Services | Data Sensitivity |
 |----------|----------|-----------------|
 | **Eesti Energia / Enefit** | Electricity, heating | HIGH |
-| **Väike功夫** | District heating | MEDIUM |
+| **Väike-Õmara** | District heating | MEDIUM |
 
 **Confidence:** MEDIUM
 
@@ -314,6 +329,8 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 ## CONFIDENCE RATINGS METHODOLOGY
 
 - **HIGH:** Multiple independent sources, official statements, recent data (2024-2026)
+- **HIGH-MEDIUM:** Strong source base with minor gaps in recency or corroboration
+- **MEDIUM-HIGH:** Predominantly reliable sources with some dated or limited information
 - **MEDIUM:** Limited sources or some dated information
 - **LOW:** Single source, unverified claims, or significantly dated information
 
