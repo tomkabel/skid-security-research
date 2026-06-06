@@ -6,6 +6,7 @@
 # Project-specific
 plans/
 docs/02-opinion-editorials/02-tom-kristian-abel-op-ed.md
+02-tom-kristian-abel-op-ed.md
 
 # Dependencies
 node_modules/
@@ -180,3 +181,6 @@ db/
 package-lock.json.bak
 yarn.lock.bak
 skills-lock.json
+
+.commandcode/
+pnpm*
