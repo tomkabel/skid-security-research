@@ -54,7 +54,7 @@ BITB --> EmbeddedVNC[Embeds VNC<br/>via iframe]
 ```
 
 
-## 3.1 Attack Flow
+### 3.1 Attack Flow
 
 ```mermaid
 
@@ -112,3 +112,19 @@ The most effective immediate defense for end-users:
 > **"If you can't drag the login window off your browser and onto your desktop wallpaper, it is a fake window."**
 
 A BITB window is rendered in HTML/CSS and is confined to the boundaries of the parent browser tab. A real popup window is a separate OS process that can move freely across monitors.
+
+---
+
+## 6. Disclosure Timeline
+
+| Date | Event |
+|------|-------|
+| 2025-09 | Vulnerability identified during security research |
+| 2025-10 | Preliminary technical analysis completed |
+| 2025-11 | Responsible disclosure initiated with SK ID Solutions |
+| 2025-12-05 | SK ID Solutions acknowledges vulnerability; states risk was "consciously accepted" during development |
+| 2025-12 | CVE registration attempted; SK ID marks entry as **DISPUTED** |
+| 2026-02 | Formal memoranda submitted to RIA, TTJA, and AKI |
+| 2026-04 | Research published |
+
+For the full disclosure timeline across all findings, see [Responsible Disclosure Timeline](../05-enforcement/responsible-disclosure-timeline.md).
