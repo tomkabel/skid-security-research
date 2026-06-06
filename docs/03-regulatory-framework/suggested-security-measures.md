@@ -1,10 +1,13 @@
 ---
 title: Suggested Security Measures
-description: Additional security measures for Smart-ID Relying Parties to protect against phishing threats
+description: Reproduction of SK ID Solutions' documentation on additional security measures for Relying Parties, with analytical context
 ---
 URL Source: https://sk-eid.github.io/smart-id-documentation/rp-api/additional_security_measures.html
 
-Markdown Content:
+> **Document Notice:** The following is a reproduction of SK ID Solutions AS's official documentation on "Additional Security Measures" for Smart-ID Relying Parties, sourced from the public Smart-ID RP API documentation. This document is reproduced verbatim for analytical and research purposes. All content below is property of SK ID Solutions AS. For the critical analysis of these measures, see [Vulnerability Analysis](../02-technical-security/vulnerability-analysis.md).
+
+---
+
 This page lists additional security measures which can be deployed by the RP in order to protect from phishing threats and attacks.
 
 ## [](https://sk-eid.github.io/smart-id-documentation/rp-api/additional_security_measures.html#_anonymous_flows_and_user_identifiers)Anonymous flows and user identifiers

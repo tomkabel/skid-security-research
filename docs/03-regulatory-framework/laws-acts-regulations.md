@@ -24,10 +24,6 @@ This document provides a factual reference of relevant laws, acts, and regulatio
 
 **Relation to Smart-ID:** Governs the operation of Smart-ID as a qualified trust service provider. Requires compliance with security measures appropriate to the state of the art.
 
-::: tip Key Regulatory Framework
-eIDAS is the primary EU regulation governing electronic signatures and trust services. Smart-ID operates as a Qualified Trust Service Provider (QTSP) under this framework.
-:::
-
 ---
 
 ### EU AI Act (Regulation EU 2024/1689)
@@ -66,6 +62,20 @@ eIDAS is the primary EU regulation governing electronic signatures and trust ser
 - **Article 34** - Communication of a personal data breach
 
 **Relation to Smart-ID:** Governs the processing of personal data during authentication and signature operations.
+
+---
+
+### DORA (Regulation EU 2022/2554)
+
+**Scope:** Digital operational resilience for the financial sector.
+
+**Relevant Articles:**
+- **Article 5** - ICT risk management framework
+- **Article 9** - Protection and prevention
+- **Article 10** - Detection
+- **Article 11** - Response and recovery
+
+**Relation to Smart-ID:** Applies to financial institutions using Smart-ID for customer authentication. Requires financial entities to manage ICT risks, including those arising from third-party authentication providers. Mandates incident reporting and resilience testing for critical ICT services.
 
 ---
 
