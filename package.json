@@ -16,6 +16,6 @@
     "vitepress-sidebar": "^1.33.1",
     "markdown-it-footnote": "^4.0.0",
     "@types/node": "^20",
-    "typescript": "^5"
+    "typescript": "^7"
   }
 }
