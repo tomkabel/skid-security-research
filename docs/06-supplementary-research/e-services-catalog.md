@@ -11,7 +11,7 @@ description: Comprehensive catalog of Estonian e-services targets for security r
 
 Estonia operates one of the world's most advanced digital societies, with virtually all government services available online. This comprehensive catalog identifies valuable targets for threat analysis, organized by sector. Key findings:
 
-- **Smart-ID phishing** is a documented attack vector against Estonian financial services. Separately, Estonians lost an aggregate approximately €42 million to fraud of all kinds in 2024 (phone scams, marketplace fraud, investment scams, and others); no cited source apportions that aggregate figure to Smart-ID PIN-phishing specifically, so it is cited here only as general fraud-scale context, not as evidence of Smart-ID's share
+- **Smart-ID phishing** is a documented attack vector against Estonian financial services. Separately, Estonians lost approximately €42 million in aggregate to fraud of all kinds in 2024 (phone scams, marketplace fraud, investment scams, and others); no cited source apportions that aggregate figure to Smart-ID PIN-phishing specifically, so it is cited here only as general fraud-scale context, not as evidence of Smart-ID's share
 - **Government e-services** (eesti.ee) are transitioning to Smart-ID+ (as of Feb 26, 2026) but remain high-value targets
 - **Healthcare sector** experienced massive breach affecting ~50% of population (Allium UPI OÜ, 2024)
 - **Critical infrastructure** (Elering power grid) facing both physical and cyber threats
