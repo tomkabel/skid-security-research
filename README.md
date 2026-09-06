@@ -80,7 +80,7 @@ Built output lands in `docs/.vitepress/dist/`.
 
 ### Authentication Security
 
-Cross-device authentication flows lack cryptographic binding between the browser session and the mobile authenticator. Key technical considerations:
+Smart-ID's legacy notification-based authentication flow lacks cryptographic binding between the browser session and the mobile authenticator (SK ID Solutions' own RP API v3 documentation labels this flow "Not Recommended," relying on user awareness rather than cryptographic protection). Dynamic QR and App-to-App Device Link flows are documented by the vendor as "Maximum protection against phishing" and are treated separately in this research — see [Liability Re-Evaluation](docs/05-enforcement/liability-re-evaluation.md). Key technical considerations for the legacy notification flow:
 
 1. **Origin Binding**: Cryptographic binding of authentication credentials to the specific relying party origin
 2. **Channel Binding**: Linking the authentication operation to the underlying TLS session
@@ -150,15 +150,15 @@ All identified vulnerabilities were reported to SK ID Solutions through responsi
 
 ### Research Content — CC-BY-4.0
 
-All research documents, analysis, and written content in `docs/` are licensed under [Creative Commons Attribution 4.0 International](LICENSE). This allows sharing, adapting, and commercial use with proper attribution.
+Original research documents, analysis, and written content authored for this project in `docs/` are licensed under [Creative Commons Attribution 4.0 International](LICENSE). This allows sharing, adapting, and commercial use with proper attribution. This grant does **not** extend to third-party material reproduced within `docs/` (see below), which remains under its own license or permission terms.
 
 ### Build System — MIT
 
-The VitePress configuration, deployment scripts, and build tooling are licensed under the MIT License (see `docs/LICENSE`).
+The VitePress configuration (`.vitepress/`), deployment scripts and workflows (including `.github/workflows/deploy.yml`), and root `package.json`/build tooling are licensed under the MIT License (see `docs/LICENSE`).
 
 ### Third-Party Materials
 
-Third-party code, research papers, or materials included in this repository maintain their original licenses. The reproduced SK ID Solutions documentation in `docs/03-regulatory-framework/suggested-security-measures.md` is property of SK ID Solutions AS and is included for analytical purposes under fair use.
+Third-party code, research papers, or materials included in this repository remain subject to their original license or documented permission and are excluded from the CC-BY-4.0 grant above. The reproduced SK ID Solutions documentation in `docs/03-regulatory-framework/suggested-security-measures.md` is property of SK ID Solutions AS; its inclusion here is for non-commercial analytical/research commentary, not asserted as a settled fair-use determination. Anyone relying on that material beyond quotation for commentary should confirm permission with SK ID Solutions AS directly.
 
 ---
 

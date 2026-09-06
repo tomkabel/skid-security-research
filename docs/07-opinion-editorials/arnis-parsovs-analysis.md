@@ -65,6 +65,6 @@ Dr. Paršovs provides a necessary and morally aligned intervention, but his tech
 
 ---
 
-## Source
+## Note on Quoted Excerpts
 
-The original Estonian-language article by Arnis Paršovs was published by ERR (Estonian Public Broadcasting) in January 2026. The full text is available at the link above. Excerpts are quoted in translation throughout this analysis under fair use for academic commentary.
+The original Estonian-language article by Arnis Paršovs, "Pangad ei kasuta Smart-ID õngitsusrünnete vastaseid meetmeid," was lawfully published by ERR (Estonian Public Broadcasting) in January 2026 (see [Source](#source) above for author, title, and publication details). Excerpts are quoted in translation throughout this analysis for the purpose of academic commentary and critique, limited in extent to what that commentary requires. This relies on the Estonian Copyright Act's quotation exception rather than the U.S. "fair use" doctrine, which does not apply here; readers relying on more extensive reproduction of the original should consult the Act directly or seek permission from ERR/the author.

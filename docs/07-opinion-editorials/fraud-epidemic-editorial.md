@@ -33,7 +33,7 @@ Lugege seda uuesti. Teenusepakkuja, kelle käes on terve riigi digitaalne identi
 
 ## Pankade süüdlaslik mugavuskartell
 
-Miks on selline riskantne arhitektuur üldse lubatud? Siin tuleb vaadata SK ID Solutionsi omanikeringi: Swedbank, SEB ja Luminor. Pangad ei ole siin ohvrid, vaid kasusaajad. Nad on aastate jooksul süstemaatiliselt lammutanud turvalisemaid, kuid kallimaid autentimisviise (paroolikaardid, riistvaralised tokenid), asendades need odava ja mugava äpiga.
+Miks on selline riskantne arhitektuur üldse lubatud? Siin tuleb vaadata SK ID Solutionsi omanikeringi: Swedbank, SEB ja Telia Eesti. Pangad ei ole siin ohvrid, vaid kasusaajad. Nad on aastate jooksul süstemaatiliselt lammutanud turvalisemaid, kuid kallimaid autentimisviise (paroolikaardid, riistvaralised tokenid), asendades need odava ja mugava äpiga.
 
 Tekkinud on perversne huvide konflikt. Pangad, kes peaksid kaitsma meie raha, omavad ettevõtet, mis loob turvastandardid. Nad on loonud süsteemi, kus tehingute kiirus ja maht toodavad kasumit, kuid paratamatu pettuserisk on täies ulatuses veeretatud kliendi õlule. Kui LHV on püüdnud juurutada täiendavat kontrolli (nt koodide sobitamine maksetel), siis suurpangad on tõrjunud turvalisemaid lahendusi (nagu QR-koodi põhine sessioonisidumine), viidates "konkurentsivõimele". Sisuliselt on loodud mugavuskartell, kus turvalisus on teisejärguline, sest kahjud ei tule panga kasumi arvelt, vaid tavainimese rahakotist.
 
@@ -43,7 +43,7 @@ Tekkinud on perversne huvide konflikt. Pangad, kes peaksid kaitsma meie raha, om
 
 Veelgi murettekitavam on riiklik järelevalve – Riigi Infosüsteemi Ameti (RIA) ja Tarbijakaitse ja Tehnilise Järelevalve Ameti (TTJA) – halvatus. Kuidas saab teenus, mille arendaja tunnistab "teadlikult aktsepteeritud riske", omada kõrgeimat usaldusväärsuse taset (High LoA)?
 
-Euroopa eIDAS määrus ja GDPR nõuavad "turvalisust disaini kaudu" (*security by design*). Ometi on regulaatorid vaadanud pealt, kuidas Smart-ID arhitektuurijulgeolek on jäänud maha moodsast standardist (FIDO2/WebAuthn), mida kasutavad tehnoloogiahiiud nagu Google ja Apple. Kui miljardite dollaritega tehnoloogiafirmad peavad päritolu sidumist (origin binding) elementaarseks, siis miks Eesti regulaatorid lubavad meie e-riigi alustalal opereerida madalamate standarditega?
+Euroopa õigusraamistik nõuab turvalisust disainietapis, ehkki iga regulatsioon kohustab erinevat osapoolt: GDPR artikkel 25 nõuab vastutavatelt töötlejatelt "lõimitud ja vaikimisi andmekaitset" (*data protection by design and by default*), samal ajal kui eIDAS määruse artikkel 19 kohustab usaldusteenuse pakkujaid, nagu SK ID Solutions, rakendama riskipõhiseid tehnilisi ja organisatsioonilisi turvameetmeid — artikkel 24 lisab täiendavad nõuded kvalifitseeritud usaldusteenuse pakkujatele. Ometi on regulaatorid vaadanud pealt, kuidas Smart-ID arhitektuurijulgeolek on jäänud maha moodsast standardist (FIDO2/WebAuthn), mida kasutavad tehnoloogiahiiud nagu Google ja Apple. Kui miljardite dollaritega tehnoloogiafirmad peavad päritolu sidumist (origin binding) elementaarseks, siis miks Eesti regulaatorid lubavad meie e-riigi alustalal opereerida madalamate standarditega?
 
 "Riskianalüüs" ei ole vabandus turvaaugu jätmiseks, eriti kui see auk on kurjategijate peamine sissetungitee. Riigi tegevusetus on muutnud nad vaikivaks kaasosaliseks selles "digitaalses taskuvarguses". Eesti 2017. aasta ROCA kriis, kus RIA peatas 750 000 ID-kaardi sertifikaadi enne rünnakuid, näitab, et regulaator suudab tegutseda – kui tahab.
 

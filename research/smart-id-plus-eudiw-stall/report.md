@@ -3,7 +3,7 @@
 
 ## Executive Summary
 
-Estonian banks delayed Smart-ID+ implementation for over a year after its June 2025 release primarily because finite IT development resources were redirected toward the **non-negotiable EU Digital Identity Wallet (EUDIW) mandate** under eIDAS 2.0. Banks face a December 2027 legal deadline to accept EUDIW for Strong Customer Authentication — with penalties for non-compliance — while Smart-ID+ remains an optional, regional security upgrade. The deadlock has now broken: as of June 2026, Bigbank became the first to launch Smart-ID+, LHV follows next week, and Swedbank and SEB plan rollout by end of year.
+Estonian banks delayed Smart-ID+ implementation for over a year after its June 2025 release; this report's hypothesis is that finite IT development resources were partly redirected toward the EU Digital Identity Wallet (EUDIW) obligations under eIDAS 2.0 Article 5f, though no direct bank statement confirms this causal link (see §3.1 below). Article 5f(2) creates a conditional acceptance obligation — it applies only to private relying parties already legally or contractually required to use strong user authentication, excludes micro and small enterprises, is triggered only on a user's voluntary request, and runs 36 months from the entry into force of the implementing acts under Article 5a(23)/5c(6) (those acts were adopted in late 2024), commonly reported as **24 December 2027** — it is not a blanket "all banks must accept EUDIW" mandate. Article 5f itself specifies no particular EU-wide sanction; the Regulation requires Member States to lay down effective, proportionate, and dissuasive penalties, which is a different thing from "severe regulatory sanctions" defined at EU level. Smart-ID+ remains an optional, regional security upgrade with no comparable legal deadline. The deadlock has now broken: as of June 2026, Bigbank became the first to launch Smart-ID+, LHV follows next week, and Swedbank and SEB plan rollout by end of year.
 
 ## 1. The Resource Bottleneck: Two Competing Mandates
 
@@ -11,14 +11,14 @@ Banks in Estonia (and the broader EU) operate on rigid IT roadmaps with finite e
 
 | Factor | EUDIW Mandate | Smart-ID+ |
 |--------|--------------|-----------|
-| **Legal force** | Mandatory (eIDAS 2.0, Art. 5f(2)) | Optional / voluntary |
-| **Deadline** | Dec 2027 (private sector acceptance) | No legal deadline |
-| **Scope** | EU-wide, all 27 member states | Primarily Estonia, Baltic region |
-| **Penalty for non-compliance** | Severe regulatory sanctions | None |
+| **Legal force** | Conditionally mandatory for qualifying private relying parties (eIDAS 2.0, Art. 5f(2)); excludes micro/small enterprises; triggered only where strong authentication is already legally/contractually required, and only on user request | Optional / voluntary |
+| **Deadline** | 36 months after entry into force of the Art. 5a(23)/5c(6) implementing acts (adopted late 2024) — commonly reported as 24 December 2027 | No legal deadline |
+| **Scope** | EU-wide for qualifying relying parties (public sector under Art. 5f(1); qualifying private relying parties under Art. 5f(2), excluding micro/small enterprises) | Primarily Estonia, Baltic region |
+| **Penalty for non-compliance** | Not specified at EU level in Article 5f itself; Member States must set effective, proportionate, and dissuasive penalties nationally | None |
 | **Integration complexity** | Massive — new architecture, cryptography, trust frameworks | Moderate — QR-based auth flow, API upgrade |
 | **Fraud prevention** | Medium-term (zero-trust model) | Immediate (blocks phone-call phishing) |
 
-Faced with this choice, banks **deprioritized Smart-ID+** to focus engineering effort on meeting the 2026–2027 EUDIW deadlines. As the Google AI search summary captured: "Many banks paused or slowed down internal authentication migrations to focus their engineering talent on meeting the impending EUDIW deadlines."
+**Hypothesis, not established fact:** this report infers that banks deprioritized Smart-ID+ to focus engineering effort on meeting EUDIW timelines. The cited ERR reporting documents technical complexity, user-convenience trade-offs, and bank rollout decisions, but no bank has stated on the record that EUDIW work displaced Smart-ID+ engineering resources. A Google AI search synthesis ("Many banks paused or slowed down internal authentication migrations to focus their engineering talent on meeting the impending EUDIW deadlines") is not an auditable primary source and should not be read as confirming the causal link — it is included below only as a pointer to what a broader synthesis suggested, pending direct bank roadmap statements.
 
 Swedbank's head of financial crime prevention, Raul Vahtra, confirmed in January 2026: *"We have included this in our action plan and are starting development, but it must be understood that developments like this are technically quite complex and take some time."* ([ERR News, Jan 2026](https://news.err.ee/1609925612/banks-not-rushing-into-smart-id-security-upgrade))
 
@@ -30,7 +30,7 @@ The eIDAS 2.0 regulation created an inescapable compliance cascade that consumed
 - **Q2 2025**: Implementing Acts published — technical standards finalized ([eIDAS Readiness](https://eidasreadiness.com/eidas-2-timeline))
 - **Q4 2025**: Large-Scale Pilots delivered final results across finance, healthcare, travel
 - **H1 2026**: Member states must make wallets available to citizens
-- **Dec 2027**: **All EU banks must accept EUDIW** for any process requiring Strong Customer Authentication (KYC onboarding, login, high-value transfers) ([Truvity, Sep 2025](https://www.truvity.com/blog/your-banks-first-3-steps-to-eidas-2-0-compliance))
+- **~Late 2027** (36 months after the Article 5a(23)/5c(6) implementing acts, adopted late 2024, enter into force): **Qualifying private relying parties** — those already required by Union or national law or by contract to use strong user authentication, excluding micro and small enterprises — must accept EUDIW upon a user's voluntary request. This is not a universal "all EU banks" mandate, and Article 5f does not itself specify that KYC onboarding, login, and high-value transfers are the covered processes; those categories are illustrative sector examples in the source commentary, not a statutory list. ([Truvity, Sep 2025](https://www.truvity.com/blog/your-banks-first-3-steps-to-eidas-2-0-compliance))
 
 > *"Where private relying parties … are required by Union or national law to use strong user authentication for online identification … also accept European Digital Identity Wallets."* — eIDAS 2.0, Article 5f(2)
 
@@ -58,19 +58,19 @@ The Estonian state cannot compel banks to adopt Smart-ID+. Banks fall under the 
 
 Smart-ID commands nearly **60% market share** in Estonia (vs. ~23% for ID card, remainder for Mobiil-ID). The system's critical weakness: authentication can be initiated remotely, meaning a fraudster only needs to trick a victim into confirming a Smart-ID prompt on their phone during a phone call. Unlike the old code-card system, Smart-ID has **no payment limit**.
 
-The scale: fraud cases in Estonia reached **€23 million** in 2025. Paršovs argued that banks, not victims, should bear responsibility because "it is the bank's responsibility not to accept insecure authentication methods." ([BNN News, Jan 2026](https://bnn-news.com/cybersecurity-expert-estonian-banks-fail-to-implement-security-measures-against-smart-id-phishing-276140))
+The scale: a separate BNN report put fraud losses in Estonia at **€23 million "this year"** as of its publication ([BNN News, "Fraud cases on the rise in Estonia; 23 million euros swindled this year"](https://bnn-news.com/fraud-cases-on-the-rise-in-estonia-23-million-euros-swindled-this-year-274574)) — an earlier, partial-year, all-fraud-types figure, not specific to Smart-ID. This is a different metric from the €29 million total scam-loss figure for all of 2025 that RIA reports in *Cyber Security in Estonia 2026* (cited elsewhere in this research as the authoritative full-year figure); the two should not be read as the same number. Paršovs argued that banks, not victims, should bear responsibility because "it is the bank's responsibility not to accept insecure authentication methods." ([BNN News, Jan 2026](https://bnn-news.com/cybersecurity-expert-estonian-banks-fail-to-implement-security-measures-against-smart-id-phishing-276140))
 
 Smart-ID+ addresses this by:
-- **Same-device auth**: On smartphones, authentication can only be initiated from the same device
-- **QR cross-device auth**: On desktop/laptop, user must scan a QR code with their phone — requiring physical presence
-- This eliminates remote phone-call phishing, where fraudsters initiate transactions and trick victims into entering PINs
+- **Same-device auth**: On smartphones, authentication can only be initiated from the same device — this flow does close the remote phone-call phishing vector.
+- **QR cross-device auth**: On desktop/laptop, the user scans a QR code with their phone, which reduces (but does not eliminate) remote phishing risk. Scanning does not require the victim's physical presence at the fraudulent site: ERR reporting documents banks (including LHV) warning that a fraudster can display the QR code on a fake website while directing the victim to scan it over a phone call, relaying the session in real time. Same-device auth remains the stronger mitigation against this residual path.
+- Overall, Smart-ID+ substantially reduces the classic remote phone-call phishing pattern, particularly for same-device flows, but QR cross-device auth alone is risk reduction, not elimination.
 
 ## 5. The Turning Point: June 2026
 
 The deadlock has now broken, driven by three converging factors:
 
 1. **EUDIW specifications stabilized**: Implementing acts are published, ARF is mature, large-scale pilots are complete
-2. **Fraud pressure became untenable**: €23M in fraud losses created public and regulatory pressure
+2. **Fraud pressure became untenable**: tens of millions of euros in reported fraud losses (see §4 above for the distinct €23M/€29M figures and their sources) created public and regulatory pressure
 3. **Phased approach emerged**: Banks can implement Smart-ID+ as an interim security layer while EUDIW integration proceeds in parallel
 
 The rollout sequence as of June 13–14, 2026:
@@ -88,9 +88,9 @@ The strategy has shifted from "delay until EUDIW" to **"blend Smart-ID+ with fut
 
 ## Key Takeaways
 
-- **Yes, the EUDIW mandate is the primary reason Smart-ID+ stalled.** Banks had to choose between a legally mandated EU-wide infrastructure overhaul (with penalties) and a regional security upgrade (without penalties). They chose compliance.
+- **This report's working hypothesis is that the EUDIW obligation was a significant factor in the Smart-ID+ stall**, alongside technical complexity and the ownership conflict of interest (§3.1). No direct bank statement confirms EUDIW work displaced Smart-ID+ engineering resources; this remains an inference from timing and general industry commentary, not an established fact.
 
-- **The stall was not purely technical** — it was a resource allocation decision driven by regulatory prioritization. The same engineering teams that would implement Smart-ID+ are needed for EUDIW integration.
+- **The stall was not purely technical** — available reporting points to a resource-allocation and prioritization story, but the specific claim that the same engineering teams were reassigned from Smart-ID+ to EUDIW integration is not documented in primary bank sources.
 
 - **The deadlock broke in June 2026.** Bigbank's launch and LHV's imminent follow-up show banks can now pursue both in parallel, suggesting EUDIW specifications have stabilized enough to allow concurrent development.
 
