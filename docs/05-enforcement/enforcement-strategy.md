@@ -128,7 +128,7 @@ AKI should launch an investigation into the architectural decision-making proces
 
 To force immediate remediation, regulators should coordinate:
 
-1. **RIA:** If supervision establishes a statutory violation and the KorS § 28 conditions are met, RIA may issue a formal precept under the EUTS § 22 state-supervision mandate, citing non-compliance with eIDAS Art 24(2).
+1. **RIA:** If supervision establishes a statutory violation and the KorS § 28 conditions are met, RIA may issue a formal precept under the EUTS § 22 state-supervision mandate, citing the identity-verification component's failure to meet the "High" assurance-level technical specifications under eIDAS Art 8, and/or the signing (QTSP) component's non-compliance with the "trustworthy systems" obligation under eIDAS Art 24(2)(e).
 2. **AKI:** Open an investigation into GDPR Art 32 violation.
 3. **TTJA:** Initiate a supervision proceeding regarding Misleading Trading Practices.
 
@@ -158,7 +158,7 @@ The evidence proves that the vulnerability is not a bug, but a business decision
 
 | Authority | Charge / Violation | Statutory Basis | Required Action |
 | :--- | :--- | :--- | :--- |
-| **RIA** | Potential failure to meet "High Assurance" security standards; alleged operation of a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 9(2), 22, 23; KorS § 28; ATSS §§ 2, 10; KüTS § 7 | Supervisory proceeding: Consider a KorS § 28 precept if the statutory conditions are met; continued non-compliance may lead to revocation of qualified authorisation under EUTS § 9(2). |
+| **RIA** | Potential failure of the identity-verification component to meet "High" assurance-level technical specifications; alleged operation of the signing (QTSP) component as a Qualified Service with known critical flaws. | eIDAS Art 8 (assurance levels); Art 19 & 24(2) (QTSP obligations); EUTS §§ 9(2), 22, 23; KorS § 28; ATSS §§ 2, 10; KüTS § 7 | Supervisory proceeding: Consider a KorS § 28 precept if the statutory conditions are met; continued non-compliance may lead to revocation of qualified authorisation under EUTS § 9(2). |
 | **TTJA** | Misleading Trading Practices (Selling "Security" while hiding known flaws); Defective Digital Service. | TKS §§ 12, 16; VÕS § 77 | Fine: Misdemeanor procedure for deceptive marketing. Demand public risk notice. |
 | **AKI** | Violation of "Privacy by Design"; Inadequate security measures for sensitive data. | GDPR Art 25, Art 32 | Audit: Initiate investigation into "Profit over Privacy" decision making. Potential administrative fine. |
 
