@@ -50,6 +50,14 @@ This document provides a complete, chronological record of the vulnerability dis
 | 2026-04-07 | E-Services Target Catalog completed (see [E-Services Catalog](../06-supplementary-research/e-services-catalog.md)) |
 | 2026-04 | Full research repository published |
 
+### Phase 5: Accessibility-Service Abuse Finding (2026 Q3)
+
+| Date | Event |
+|------|-------|
+| 2026-09 | Accessibility-service abuse of the Smart-ID app identified as a distinct, on-device attack class, separate from the signing-relay/QRLJacking findings above (see [Accessibility-Service Abuse](../02-technical-security/accessibility-service-abuse.md)) |
+| 2026-09 | Existence-proof review of SteroidID (a defensive research tool demonstrating this automation class) completed; no exploit code or selectors reproduced in this repository |
+| 2026-09 | Publication of this finding as a class-of-attack disclosure. This is a new, previously undisclosed finding — separate vendor notification specific to this finding has not yet been confirmed as of this publication, and is intended to follow the same responsible disclosure principles applied to the earlier findings in this timeline |
+
 ---
 
 ## Key Evidence
@@ -85,3 +93,4 @@ This research followed responsible disclosure principles:
 | CVE status | DISPUTED (by vendor) |
 | Regulatory submissions filed | Yes — RIA, TTJA, AKI (April 8, 2026) |
 | Research published | Yes (April 2026) |
+| Accessibility-service abuse finding — vendor notification | Not yet confirmed as of publication (September 2026); this finding is new and distinct from the December 2025 correspondence above, which concerned the signing-relay/QRLJacking vector only |
