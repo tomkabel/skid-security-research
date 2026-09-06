@@ -11,7 +11,7 @@ description: Comprehensive catalog of Estonian e-services targets for security r
 
 Estonia operates one of the world's most advanced digital societies, with virtually all government services available online. This comprehensive catalog identifies valuable targets for threat analysis, organized by sector. Key findings:
 
-- **Smart-ID phishing** is the dominant attack vector against Estonian financial services, with €42+ million in fraud losses reported
+- **Smart-ID phishing** is a documented attack vector against Estonian financial services; Estonians lost an aggregate €42+ million to fraud in 2024, with reporting attributing many (not all) of those scams to Smart-ID PIN-phishing
 - **Government e-services** (eesti.ee) are transitioning to Smart-ID+ (as of Feb 26, 2026) but remain high-value targets
 - **Healthcare sector** experienced massive breach affecting ~50% of population (Allium UPI OÜ, 2024)
 - **Critical infrastructure** (Elering power grid) facing both physical and cyber threats
@@ -314,7 +314,7 @@ This catalog serves a specific analytical purpose for the Smart-ID security rese
 
 ### Key Analytical Links
 
-**Financial Services (Section 1):** Estonian banks are the primary Relying Parties for Smart-ID and the organizations with the most to lose from authentication failures. The €42M in documented fraud losses — and the concentration of those losses in Smart-ID-authenticated transactions — demonstrate the economic scale of the architectural vulnerabilities analyzed in [Smart-ID Security Analysis](../01-core-research/smartid-security-analysis.md). The ownership structure (Swedbank, SEB, Luminor as shareholders in SK ID Solutions) is directly relevant to the conflict-of-interest analysis in the enforcement strategy documents.
+**Financial Services (Section 1):** Estonian banks are the primary Relying Parties for Smart-ID and the organizations with the most to lose from authentication failures. The €42M in aggregate fraud losses — reported alongside (not proven to be concentrated in) Smart-ID PIN-phishing scams — demonstrates the economic scale of the architectural vulnerabilities analyzed in [Smart-ID Security Analysis](../01-core-research/smartid-security-analysis.md). The ownership structure (Swedbank AS, SEB Pank AS, and Telia Eesti AS as founding shareholders in SK ID Solutions) is directly relevant to the conflict-of-interest analysis in the enforcement strategy documents.
 
 **Government E-Services (Section 2):** Estonia's state portals adopted Smart-ID+ in February 2026 — four months ahead of commercial banks. This asymmetric adoption pattern (state leads, banks lag) is evidence of the market failure analyzed in the [RIA Memorandum](../04-regulatory-memoranda/ria-memorandum.md). The state's ability to mandate security upgrades for its own portals — contrasted with its inability to compel banks — demonstrates the regulatory jurisdiction gap.
 
@@ -324,7 +324,7 @@ This catalog serves a specific analytical purpose for the Smart-ID security rese
 
 ### How to Use This Catalog
 
-- **For security researchers:** Prioritize targets by the "Data Sensitivity" and "Notable Incidents" columns. CRITICAL-rated services with documented breaches represent the highest-value research targets.
+- **For security researchers:** Prioritize targets by the "Data Sensitivity" and "Notable Incidents" columns. CRITICAL-rated services with documented breaches represent the highest analytical priority for this study. This catalog is a research-scoping reference, not a targeting directive: any testing must be authorized in writing by the system owner, must never touch production data or live accounts, and must follow this project's [responsible-disclosure policy](../05-enforcement/responsible-disclosure-timeline.md) rather than unauthorized probing of the named organizations.
 - **For regulators:** The catalog maps the surface area of Smart-ID dependency across the Estonian economy, demonstrating that authentication infrastructure is a systemic risk, not a commercial concern.
 - **For Relying Parties:** Compare your authentication implementation against peers in the same sector. If competitors have adopted Smart-ID+ and you have not, the catalog provides evidence for prioritizing migration.
 
