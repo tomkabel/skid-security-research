@@ -12,7 +12,7 @@ description: Comprehensive catalog of Estonian e-services targets for security r
 Estonia operates one of the world's most advanced digital societies, with virtually all government services available online. This comprehensive catalog identifies valuable targets for threat analysis, organized by sector. Key findings:
 
 - **Smart-ID phishing** is the dominant attack vector against Estonian financial services, with €42+ million in fraud losses reported
-- **Government e-services** (eesti.ee) are transitioning to Smart-ID+ (as of Feb 26, 2026) but remain high-value targets
+- **Government e-services** (eesti.ee) mandated Smart-ID+ for state e-service login from Feb 26, 2026 — SK ID Solutions had introduced Smart-ID+ itself in June 2025; the Feb 26, 2026 date is eesti.ee's own adoption, not the product's launch. State e-services remain high-value targets in the interim
 - **Healthcare sector** experienced massive breach affecting ~50% of population (Allium UPI OÜ, 2024)
 - **Critical infrastructure** (Elering power grid) facing both physical and cyber threats
 - **Estonian banks** (Swedbank, SEB, LHV) under unprecedented fraud pressure withSmart-ID vulnerabilities actively exploited
@@ -25,7 +25,7 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 |----------|----------------------|-----------------|-------------------|
 | **Swedbank Estonia** | Smart-ID, Mobile-ID, ID-card, Password | CRITICAL | €27M+ fraud losses (2025); phishing attacks targeting Smart-ID users |
 | **SEB Estonia** | Smart-ID, Mobile-ID, ID-card | CRITICAL | FIU damages claim filed; ongoing fraud litigation |
-| **LHV Bank** | Smart-ID, Mobile-ID, ID-card | CRITICAL | Smart-ID security features added (2019); pension fund management |
+| **LHV Bank** | Smart-ID, Mobile-ID, ID-card | CRITICAL | First bank to require verification-code (code-matching) confirmation on payments; rolled out Smart-ID+ login across its Internet Bank from 16 June 2026, a year after SK's June 2025 launch; pension fund management |
 | **Coop Pank** | Smart-ID, Mobile-ID | HIGH | Part of cooperative banking network |
 
 **Confidence:** HIGH
@@ -33,7 +33,7 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 **Security Incidents:**
 - Swedbank reported "unprecedented fraud pressure" (Dec 2025) with phone scams impersonating trusted institutions
 - Cybersecurity researcher Arnis Paršovs (University of Tartu) documented banks' failure to implement Smart-ID phishing protections
-- Banks slow to adopt Smart-ID+ upgrade (announced Jan 2026 rollout)
+- Banks slow to adopt Smart-ID+ (SK launched it in June 2025; commercial-bank rollout lagged by roughly a year — e.g. LHV from 16 June 2026)
 - €42 million total fraud losses reported against Estonian banks
 
 **Attack Vectors:**
@@ -295,7 +295,7 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 
 | Method | Provider | Security Level | Vulnerabilities |
 |--------|----------|---------------|-----------------|
-| **Smart-ID+** | SK ID Solutions | HIGH (upgraded Feb 2026) | Phishing if PIN disclosed |
+| **Smart-ID+** | SK ID Solutions | HIGH (launched June 2025; mandated for state e-services Feb 2026) | Phishing if PIN disclosed |
 | **Mobile-ID** | Telia, Elisa | HIGH | SIM cloning risk |
 | **ID-card** | State-issued | HIGH | Browser compatibility issues |
 | **Password** | Various | MEDIUM-LOW | Credential stuffing, phishing |
@@ -304,7 +304,7 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 **Smart-ID phishing concerns:**
 - Six years of documented Smart-ID phishing scams
 - Banks slow to implement protections
-- New Smart-ID+ roll-out aims to address this (Feb 2026)
+- Smart-ID+ (launched by SK in June 2025) aims to address this; state e-services mandated it from Feb 2026, commercial banks lagged further still
 
 ---
 
@@ -314,7 +314,7 @@ This catalog serves a specific analytical purpose for the Smart-ID security rese
 
 ### Key Analytical Links
 
-**Financial Services (Section 1):** Estonian banks are the primary Relying Parties for Smart-ID and the organizations with the most to lose from authentication failures. The €42M in documented fraud losses — and the concentration of those losses in Smart-ID-authenticated transactions — demonstrate the economic scale of the architectural vulnerabilities analyzed in [Smart-ID Security Analysis](../01-core-research/smartid-security-analysis.md). The ownership structure (Swedbank, SEB, Luminor as shareholders in SK ID Solutions) is directly relevant to the conflict-of-interest analysis in the enforcement strategy documents.
+**Financial Services (Section 1):** Estonian banks are the primary Relying Parties for Smart-ID and the organizations with the most to lose from authentication failures. The €42M in documented fraud losses — and the concentration of those losses in Smart-ID-authenticated transactions — demonstrate the economic scale of the architectural vulnerabilities analyzed in [Smart-ID Security Analysis](../01-core-research/smartid-security-analysis.md). The ownership structure (Swedbank AS 25%, SEB Pank AS 25%, and Telia Eesti AS 50%, as shareholders in SK ID Solutions AS since its 2001 founding) is directly relevant to the conflict-of-interest analysis in the enforcement strategy documents.
 
 **Government E-Services (Section 2):** Estonia's state portals adopted Smart-ID+ in February 2026 — four months ahead of commercial banks. This asymmetric adoption pattern (state leads, banks lag) is evidence of the market failure analyzed in the [RIA Memorandum](../04-regulatory-memoranda/ria-memorandum.md). The state's ability to mandate security upgrades for its own portals — contrasted with its inability to compel banks — demonstrates the regulatory jurisdiction gap.
 
@@ -345,6 +345,8 @@ This catalog serves a specific analytical purpose for the Smart-ID security rese
 11. [Applied Cyber Security Group - List of Estonian e-services using eID](https://acs.cs.ut.ee/services_using_eid/) (UT.ee)
 12. [Elisa Estonia sees number of cyber threats blocked double in 2025](https://www.telecompaper.com/news/elisa-estonia-sees-number-of-cyber-threats-blocked-double-in-2025--1560149) (Telecompaper, Jan 2026)
 13. [Swedbank: Estonia seeing unprecedented fraud pressure](https://news.err.ee/1609892917/swedbank-estonia-seeing-unprecedented-fraud-pressure) (ERR, Dec 2025)
+14. [LHV introduces Smart-ID+ solution](https://www.lhv.ee/en/news/2026/33) (LHV, Jun 2026) — confirms Smart-ID+ login rollout across LHV's Internet Bank from 16 June 2026
+15. SK ID Solutions AS — Trust Services Practice Statement and company registry (Inforegister.ee) — confirms ownership: Swedbank AS (25%), SEB Pank AS (25%), Telia Eesti AS (50%), founded 2001
 
 ---
 

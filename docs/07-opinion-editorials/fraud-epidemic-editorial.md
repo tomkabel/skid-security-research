@@ -33,7 +33,7 @@ Lugege seda uuesti. Teenusepakkuja, kelle käes on terve riigi digitaalne identi
 
 ## Pankade süüdlaslik mugavuskartell
 
-Miks on selline riskantne arhitektuur üldse lubatud? Siin tuleb vaadata SK ID Solutionsi omanikeringi: Swedbank, SEB ja Luminor. Pangad ei ole siin ohvrid, vaid kasusaajad. Nad on aastate jooksul süstemaatiliselt lammutanud turvalisemaid, kuid kallimaid autentimisviise (paroolikaardid, riistvaralised tokenid), asendades need odava ja mugava äpiga.
+Miks on selline riskantne arhitektuur üldse lubatud? Siin tuleb vaadata SK ID Solutionsi omanikeringi: Swedbank, SEB ja Telia Eesti. Pangad ei ole siin ohvrid, vaid kasusaajad. Nad on aastate jooksul süstemaatiliselt lammutanud turvalisemaid, kuid kallimaid autentimisviise (paroolikaardid, riistvaralised tokenid), asendades need odava ja mugava äpiga.
 
 Tekkinud on perversne huvide konflikt. Pangad, kes peaksid kaitsma meie raha, omavad ettevõtet, mis loob turvastandardid. Nad on loonud süsteemi, kus tehingute kiirus ja maht toodavad kasumit, kuid paratamatu pettuserisk on täies ulatuses veeretatud kliendi õlule. Kui LHV on püüdnud juurutada täiendavat kontrolli (nt koodide sobitamine maksetel), siis suurpangad on tõrjunud turvalisemaid lahendusi (nagu QR-koodi põhine sessioonisidumine), viidates "konkurentsivõimele". Sisuliselt on loodud mugavuskartell, kus turvalisus on teisejärguline, sest kahjud ei tule panga kasumi arvelt, vaid tavainimese rahakotist.
 

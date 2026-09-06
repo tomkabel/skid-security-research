@@ -51,6 +51,21 @@ This document provides a factual reference of relevant laws, acts, and regulatio
 
 ---
 
+### Commission Delegated Regulation (EU) 2018/389 — RTS on Strong Customer Authentication
+
+**Citation:** EUR-Lex CELEX:32018R0389.
+
+**Scope:** Regulatory Technical Standards (RTS) supplementing PSD2, specifying requirements for strong customer authentication and common and secure open standards of communication.
+
+**Relevant Articles:**
+- **Article 2(2)(d)** — Transaction-monitoring mechanisms under Article 2(1) must take into account, at a minimum, "signs of malware infection in any sessions of the authentication procedure."
+- **Article 2(2)(e)** — *Quoted here together with its condition, which qualifies it:* "in case the access device or the software is provided by the payment service provider, a log of the use of the access device or the software provided to the payment service user and the abnormal use of the access device or the software." This provision applies only where the PSP itself supplies the access device or software — it does not apply generally.
+- **Article 18(2)(c)(ii)–(iii)** — A payment service provider may not apply the transaction-risk-analysis (TRA) exemption from SCA where its real-time risk analysis has identified "unusual information about the payer's device/software access" (ii) or "malware infection in any session of the authentication procedure" (iii). Both conditions are unqualified — unlike Article 2(2)(e), they do not depend on the PSP having supplied the device or software.
+
+**Relation to Smart-ID:** These provisions establish that server-side monitoring of session- and device-level signals for signs of malware or anomalous access is not a novel or optional practice for payment service providers — it is a standing regulatory requirement (Art. 2(2)(d)) and a hard block on an SCA exemption (Art. 18(2)(c)(ii)–(iii)) wherever those signals are present. This sits alongside the eIDAS, EUTS, and GDPR framework already referenced above: the same category of server-side, RP-deployable session signal this research repository's technical analyses discuss elsewhere in the Technical Security section is independently and already contemplated by PSD2 RTS for banks generally, regardless of what Smart-ID itself does or does not implement.
+
+---
+
 ### GDPR (Regulation EU 2016/679)
 
 **Scope:** Protection of personal data.
