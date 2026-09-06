@@ -41,10 +41,10 @@ The core violation lies in the eIDAS Regulation (EU) No 910/2014 and its impleme
 
 ### Estonian Law: EUTS
 
-- **§ 14 (Supervision):** RIA has the direct mandate to supervise compliance. If a QTSP fails to meet security requirements, RIA can suspend or revoke the "Qualified" status.
-- **§ 15 (Conformity Assessment):** RIA has the authority to reject conformity assessment reports if they do not adequately address known vulnerabilities.
-- **§ 34 (State Supervision):** RIA is explicitly designated as the supervisory body.
-- **§ 36 (Precepts and Penalty Payments):** RIA may issue a precept demanding the elimination of the violation, with penalty payments for non-compliance.
+- **§§ 14–15 (Trusted list entry and publication):** These sections govern only the timing and publication of the trusted list; they are not the supervisory or sanctioning basis and are cited here for completeness, not authority.
+- **§ 22 (State supervision):** RIA (as competent authority) and the competent information security authority have the direct mandate to supervise compliance with eIDAS and the Act.
+- **§ 23 (Specific measures of state supervision):** RIA may apply the precept and enforcement measures of the Law Enforcement Act (§§ 30–32, 49–52) to compel compliance.
+- **§ 9(2) (Revocation of authorisation):** If a QTSP no longer meets the requirements of eIDAS or the Act and fails to correct this within a term set by RIA, RIA revokes the "Qualified" authorisation — the closest EUTS mechanism to suspending or revoking Qualified status.
 
 ### Cybersecurity Act (KüTS)
 
@@ -55,7 +55,7 @@ SK ID Solutions is a provider of a vital service (digital identification) under 
 
 ### Recommended Action
 
-RIA must issue an immediate Precept under EUTS § 36 and the Cybersecurity Act (KüTS). The admission that risk was "accepted" invalidates the certification audit, since the audit relies on the premise that all critical risks are mitigated, not merely "accepted" for convenience.
+RIA must issue an immediate Precept under EUTS §§ 22–23 (state supervision and specific supervisory measures) and the Cybersecurity Act (KüTS). The admission that risk was "accepted" invalidates the certification audit, since the audit relies on the premise that all critical risks are mitigated, not merely "accepted" for convenience.
 
 ---
 
@@ -127,7 +127,7 @@ AKI should launch an investigation into the architectural decision-making proces
 
 To force immediate remediation, regulators should coordinate:
 
-1. **RIA:** Issue a formal Precept under EUTS § 36 citing non-compliance with eIDAS Art 24(2).
+1. **RIA:** Issue a formal Precept under EUTS § 22 (state supervision) and § 23 (specific supervisory measures), citing non-compliance with eIDAS Art 24(2).
 2. **AKI:** Open an investigation into GDPR Art 32 violation.
 3. **TTJA:** Initiate a supervision proceeding regarding Misleading Trading Practices.
 
@@ -139,15 +139,15 @@ The combined weight of a RIA Precept and a GDPR Fine creates an unavoidable lega
 
 > **Important:** This section describes the legal instruments available to RIA under Estonian law and provides a hypothetical illustration of how those instruments could be applied. No precept has been issued. The following is analytical, not documentary.
 
-Under EUTS § 36, RIA may issue a precept (*ettekirjutus*) demanding that a trust service provider eliminate a violation of statutory requirements. The precept may be coupled with a penalty payment (*summiraha*) for non-compliance. EUTS §§ 14–15 establish RIA's supervisory mandate over qualified trust service providers, including the authority to suspend or revoke qualified status.
+Under EUTS § 22 (state supervision) read with § 23 (specific supervisory measures, applying the precept and penalty-payment mechanisms of the Law Enforcement Act, §§ 30–32 and 49–52), RIA may issue a precept (*ettekirjutus*) demanding that a trust service provider eliminate a violation of statutory requirements, coupled with a penalty payment (*sunniraha*) for non-compliance. EUTS §§ 14–15 establish only the trusted-list entry and publication mechanics and are not themselves a source of supervisory or sanctioning power. The authority to revoke a qualified trust service provider's authorisation — the closest EUTS equivalent to "suspending qualified status" — sits in § 9(2): the competent authority revokes an authorisation if the provider no longer complies with Regulation (EU) No. 910/2014 or the Act and has not corrected this within a term set by the authority.
 
 A hypothetical enforcement pathway would involve:
 
 1. **Immediate remediation order:** Require implementation of cryptographic context binding (or equivalent architectural mitigation) to address QRLJacking/MITM susceptibility within a defined compliance period.
 2. **Independent audit:** Mandate submission of a new conformity assessment report from an accredited auditor confirming closure of the identified vulnerability.
-3. **Non-compliance penalty:** Failure to remediate within the compliance period would expose the provider to penalty payments and potential suspension of qualified trust service provider status.
+3. **Non-compliance penalty:** Failure to remediate within the compliance period would expose the provider to penalty payments (*sunniraha*, under the Law Enforcement Act mechanisms applied via EUTS § 23) and potential revocation of qualified trust service provider authorisation under EUTS § 9(2).
 
-The FIDO2 Pivot Analysis (see [FIDO2 Pivot Analysis](../06-supplementary-research/fido2-pivot-analysis.md)) demonstrates that the technical capability to remediate exists. The question is regulatory will, not technical feasibility.
+The [FIDO2 Pivot Analysis](../06-supplementary-research/fido2-pivot-analysis.md) lays out a general remediation architecture (FIDO2/WebAuthn with Cloud Signature Consortium integration) that is technically achievable in principle. It does not establish that SK ID Solutions specifically has evaluated, committed to, or could feasibly certify and migrate to this architecture on any particular timeline — that is a proposed remediation path this research recommends regulators require be assessed, not a demonstrated capability of the vendor. Whether it is achievable in practice for SK ID Solutions is a question this research has not verified with the vendor.
 
 ---
 
@@ -157,7 +157,7 @@ The evidence proves that the vulnerability is not a bug, but a business decision
 
 | Authority | Charge / Violation | Statutory Basis | Required Action |
 | :--- | :--- | :--- | :--- |
-| **RIA** | Failure to meet "High Assurance" security standards; Operating a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 14, 15, 36; KüTS § 7 | Supervisory proceeding: Mandate architectural fix (Context Binding) under threat of license suspension. |
+| **RIA** | Failure to meet "High Assurance" security standards; Operating a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 9(2), 22, 23; KüTS § 7 | Supervisory proceeding: Mandate architectural fix (Context Binding) under threat of a precept and, for continued non-compliance, revocation of qualified authorisation under EUTS § 9(2). |
 | **TTJA** | Misleading Trading Practices (Selling "Security" while hiding known flaws); Defective Digital Service. | TKS §§ 12, 16; VÕS § 77 | Fine: Misdemeanor procedure for deceptive marketing. Demand public risk notice. |
 | **AKI** | Violation of "Privacy by Design"; Inadequate security measures for sensitive data. | GDPR Art 25, Art 32 | Audit: Initiate investigation into "Profit over Privacy" decision making. Potential administrative fine. |
 
