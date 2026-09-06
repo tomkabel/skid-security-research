@@ -128,7 +128,7 @@ AKI should launch an investigation into the architectural decision-making proces
 
 To force immediate remediation, regulators should coordinate:
 
-1. **RIA:** Issue a formal Precept under KorS § 28, applied as part of the EUTS § 22 state-supervision mandate, citing non-compliance with eIDAS Art 24(2).
+1. **RIA:** If supervision establishes a statutory violation and the KorS § 28 conditions are met, RIA may issue a formal precept under the EUTS § 22 state-supervision mandate, citing non-compliance with eIDAS Art 24(2).
 2. **AKI:** Open an investigation into GDPR Art 32 violation.
 3. **TTJA:** Initiate a supervision proceeding regarding Misleading Trading Practices.
 
@@ -140,7 +140,7 @@ The combined weight of a RIA Precept and a GDPR Fine creates an unavoidable lega
 
 > **Important:** This section describes the legal instruments available to RIA under Estonian law and provides a hypothetical illustration of how those instruments could be applied. No precept has been issued. The following is analytical, not documentary.
 
-Under EUTS § 22 (state supervision), RIA may issue a precept (*ettekirjutus*) demanding that a trust service provider eliminate a violation of statutory requirements, under the general precept authority of KorS § 28 — not EUTS § 23, which incorporates only the special investigative measures of KorS §§ 30–32 and §§ 49–52 (questioning, document requests, identity checks, and premises entry). Non-compliance with a precept may be enforced with a penalty payment (*sunniraha*) under the Substitutional Performance and Non-Compliance Levies Act (ATSS §§ 2 and 10). EUTS §§ 14–15 establish only the trusted-list entry and publication mechanics and are not themselves a source of supervisory or sanctioning power. The authority to revoke a qualified trust service provider's authorisation — the closest EUTS equivalent to "suspending qualified status" — sits in § 9(2): the competent authority revokes an authorisation if the provider no longer complies with Regulation (EU) No. 910/2014 or the Act and has not corrected this within a term set by the authority.
+Where a threat or disturbance exists and the other statutory conditions of KorS § 28 are met, RIA may — as part of its EUTS § 22 (state supervision) mandate — issue a precept (*ettekirjutus*) demanding that a trust service provider counter the threat or eliminate a violation of statutory requirements, under the general precept authority of KorS § 28 — not EUTS § 23, which incorporates only the special investigative measures of KorS §§ 30–32 and §§ 49–52 (questioning, document requests, identity checks, and premises entry). A statutory violation or abstract risk alone, without a threat or disturbance and the other § 28 conditions, does not establish this precept authority. Non-compliance with a precept may be enforced with a penalty payment (*sunniraha*) under the Substitutional Performance and Non-Compliance Levies Act (ATSS §§ 2 and 10). EUTS §§ 14–15 establish only the trusted-list entry and publication mechanics and are not themselves a source of supervisory or sanctioning power. The authority to revoke a qualified trust service provider's authorisation — the closest EUTS equivalent to "suspending qualified status" — sits in § 9(2): the competent authority revokes an authorisation if the provider no longer complies with Regulation (EU) No. 910/2014 or the Act and has not corrected this within a term set by the authority.
 
 A hypothetical enforcement pathway would involve:
 
@@ -158,7 +158,7 @@ The evidence proves that the vulnerability is not a bug, but a business decision
 
 | Authority | Charge / Violation | Statutory Basis | Required Action |
 | :--- | :--- | :--- | :--- |
-| **RIA** | Failure to meet "High Assurance" security standards; Operating a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 9(2), 22, 23; KorS § 28; ATSS §§ 2, 10; KüTS § 7 | Supervisory proceeding: Mandate architectural fix (Context Binding) under threat of a KorS § 28 precept and, for continued non-compliance, revocation of qualified authorisation under EUTS § 9(2). |
+| **RIA** | Potential failure to meet "High Assurance" security standards; alleged operation of a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 9(2), 22, 23; KorS § 28; ATSS §§ 2, 10; KüTS § 7 | Supervisory proceeding: Consider a KorS § 28 precept if the statutory conditions are met; continued non-compliance may lead to revocation of qualified authorisation under EUTS § 9(2). |
 | **TTJA** | Misleading Trading Practices (Selling "Security" while hiding known flaws); Defective Digital Service. | TKS §§ 12, 16; VÕS § 77 | Fine: Misdemeanor procedure for deceptive marketing. Demand public risk notice. |
 | **AKI** | Violation of "Privacy by Design"; Inadequate security measures for sensitive data. | GDPR Art 25, Art 32 | Audit: Initiate investigation into "Profit over Privacy" decision making. Potential administrative fine. |
 
