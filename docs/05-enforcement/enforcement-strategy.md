@@ -6,9 +6,10 @@ description: Legal analysis and strategic enforcement recommendations for Estoni
 # Regulatory Enforcement Strategy
 
 **To:** RIA / TTJA / AKI
-**From:** Senior Legal & Cybersecurity Policy Auditor
-**Date:** February 1, 2026
+**Date:** 2026-02-01
 **Subject:** Enforcement Mechanisms for Unremediated QRLJacking and MitM Vulnerabilities in Smart-ID
+
+> **Author's Note:** This document represents technical and policy analysis. The author is not a lawyer. For legal advice on regulatory enforcement, consult with qualified legal professionals.
 
 ## Summary
 
@@ -134,28 +135,19 @@ The combined weight of a RIA Precept and a GDPR Fine creates an unavoidable lega
 
 ---
 
-## 6. Draft Precept Template (For RIA)
+## 6. Enforcement Instruments Available to RIA
 
-**NOTICE OF ADMINISTRATIVE PRECEPT**
+> **Important:** This section describes the legal instruments available to RIA under Estonian law and provides a hypothetical illustration of how those instruments could be applied. No precept has been issued. The following is analytical, not documentary.
 
-**To:** SK ID Solutions AS
-**From:** Riigi Infosüsteemi Amet (RIA)
-**Basis:** Electronic Identification and Trust Services for Electronic Transactions Act (EUTS)
+Under EUTS § 36, RIA may issue a precept (*ettekirjutus*) demanding that a trust service provider eliminate a violation of statutory requirements. The precept may be coupled with a penalty payment (*summiraha*) for non-compliance. EUTS §§ 14–15 establish RIA's supervisory mandate over qualified trust service providers, including the authority to suspend or revoke qualified status.
 
-**STATEMENT OF FACTS:**
-Based on evidence acquired by the Authority, SK ID Solutions AS has admitted to knowingly deploying the "Smart-ID+" service with a known vulnerability (Lack of Context Binding/QRLJacking susceptibility), citing "implementation complexity" as justification.
+A hypothetical enforcement pathway would involve:
 
-**VIOLATION:**
-This constitutes a breach of eIDAS Regulation Art 19(1) and Art 24(2)(e), as the service fails to employ state-of-the-art measures to mitigate high-impact risks to the security of the trust service.
+1. **Immediate remediation order:** Require implementation of cryptographic context binding (or equivalent architectural mitigation) to address QRLJacking/MITM susceptibility within a defined compliance period.
+2. **Independent audit:** Mandate submission of a new conformity assessment report from an accredited auditor confirming closure of the identified vulnerability.
+3. **Non-compliance penalty:** Failure to remediate within the compliance period would expose the provider to penalty payments and potential suspension of qualified trust service provider status.
 
-**PRECEPT:**
-
-1. **Immediate Remediation:** SK ID Solutions must implement "Context Binding" (or equivalent architectural mitigation) to prevent QRLJacking/MITM attacks within 30 calendar days.
-2. **External Audit:** Submit a new conformity assessment report by an independent auditor confirming the closure of this vulnerability.
-3. **Penalty Warning:** Failure to comply by [Date] will result in a non-compliance levy of 10,000 EUR per week and potential suspension of "Qualified Trust Service Provider" status for the Smart-ID service.
-
-**Signatory:**
-[Director General of RIA]
+The FIDO2 Pivot Analysis (see [FIDO2 Pivot Analysis](../06-supplementary-research/fido2-pivot-analysis.md)) demonstrates that the technical capability to remediate exists. The question is regulatory will, not technical feasibility.
 
 ---
 
@@ -165,7 +157,7 @@ The evidence proves that the vulnerability is not a bug, but a business decision
 
 | Authority | Charge / Violation | Statutory Basis | Required Action |
 | :--- | :--- | :--- | :--- |
-| **RIA** | Failure to meet "High Assurance" security standards; Operating a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 14, 15, 36; KüTS § 7 | Precept: Mandate architectural fix (Context Binding) under threat of losing License. |
+| **RIA** | Failure to meet "High Assurance" security standards; Operating a Qualified Service with known critical flaws. | eIDAS Art 19 & 24; EUTS §§ 14, 15, 36; KüTS § 7 | Supervisory proceeding: Mandate architectural fix (Context Binding) under threat of license suspension. |
 | **TTJA** | Misleading Trading Practices (Selling "Security" while hiding known flaws); Defective Digital Service. | TKS §§ 12, 16; VÕS § 77 | Fine: Misdemeanor procedure for deceptive marketing. Demand public risk notice. |
 | **AKI** | Violation of "Privacy by Design"; Inadequate security measures for sensitive data. | GDPR Art 25, Art 32 | Audit: Initiate investigation into "Profit over Privacy" decision making. Potential administrative fine. |
 

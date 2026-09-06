@@ -28,7 +28,7 @@ This document provides a complete, chronological record of the vulnerability dis
 | 2025-11 | Technical details of QRLJacking and MITM vulnerability vectors communicated to SK ID Solutions security team |
 | 2025-12-05 | **SK ID Solutions responds.** Key admission: *"See turvanõrkus oli meile arenduse käigus juba kohe teada... [kuid] teatud perioodiks oleme seda riski teadlikult aktsepteerinud."* ("This security vulnerability was already known to us during development... [but] for a certain period we have consciously accepted this risk.") |
 | 2025-12 | CVE registration attempted for the identified vulnerability |
-| 2025-12 | **SK ID Solutions marks CVE entry as DISPUTED**, classifying the attack vector as an "architectural feature" rather than a vulnerability |
+| 2025-12 | **SK ID Solutions marks CVE entry as DISPUTED**, classifying the attack vector as an "architectural feature" rather than a vulnerability. CVE disputes are part of the standard vulnerability reporting process; vendors may dispute entries they consider within their threat model. |
 
 ### Phase 3: Escalation and Regulatory Engagement (2026 Q1)
 

@@ -2,7 +2,7 @@ name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [master]  # Fixed branch name
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -32,17 +32,10 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
-      - name: Add .nojekyll file
-        run: echo "nojekyll" > docs/public/.nojekyll
-
       - name: Validate build output
         run: |
           if [ ! -d "docs/.vitepress/dist" ]; then
             echo "Build directory not found!"
-            exit 1
-          fi
-          if [ ! -f "docs/public/.nojekyll" ]; then
-            echo ".nojekyll file not found!"
             exit 1
           fi
 

@@ -6,7 +6,7 @@ description: Evaluation of public awareness and education effectiveness in fraud
 # Report: Effectiveness of Public Awareness & Education in Fraud Mitigation
 
 **To:** Cybersecurity Policymakers & Strategy Units
-**Date:** January 31, 2026
+**Date:** 2026-01-31
 **Subject:** Strategic Evaluation of Anti-Fraud Awareness Campaigns (2014–2025)
 
 ## Summary

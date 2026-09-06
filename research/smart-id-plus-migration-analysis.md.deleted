@@ -1,0 +1,179 @@
+# Smart-ID+ Banking Migration Stagnation: A Multi-Hypothesis Investigation
+
+**Date:** 14 June 2026
+**Research Scope:** EU banking sector Smart-ID+ deployment, eIDAS 2.0 / EUDIW impact analysis
+**Methodology:** Multi-source investigation using targeted web search, regulatory document analysis, industry whitepaper review, and structured hypothesis testing
+
+---
+
+## 1. Executive Summary
+
+The Smart-ID+ migration in the European banking sector has experienced a measurable but now-resolving stall between the product's technical release (June 2025) and the first wave of bank deployments (June 2026). State portals in Estonia adopted Smart-ID+ by February 2026; commercial banks followed approximately four months later, with Bigbank as first-mover on 12 June 2026, LHV shortly after, and Swedbank/SEB targeting later in 2026.
+
+The investigation tested four competing hypotheses alongside the EUDIW compliance hypothesis. The evidence strongly supports the **EUDIW compliance uncertainty** as the primary driver of delayed prioritisation, with **legacy system integration complexity** as a significant secondary contributor. Commercial friction (Hypothesis A), liability concerns (Hypothesis B), and competitive pressure from passkeys/alternatives (Hypothesis D) show weak or counter-directional evidence.
+
+The stall is most accurately characterised not as resistance or abandonment, but as **measured, risk-calibrated prioritisation**: banks are simultaneously managing Smart-ID+ upgrades for their existing ~60% user base while positioning for the mandatory EUDI Wallet acceptance deadline of mid-2027. SK ID Solutions is actively bridging both worlds through eIDAS 2.0 certification and platform products like Authentigate.
+
+---
+
+## 2. Deployment Status: Current State of Smart-ID+ Across Banks
+
+### 2.1 Timeline of Events
+
+| Date | Event |
+|------|-------|
+| June 2025 | SK ID Solutions releases Smart-ID+ API v3 for testing in demo environment; production ready from July |
+| November 2024 | SK ID Solutions begins issuing new intermediate certificates under eIDAS 2.0 standards |
+| January 2026 | ERR reports Estonian banks "weighing up" Smart-ID+ adoption, not yet deploying |
+| February 2026 | Estonian state portals (Eesti.ee, Health Portal) launch Smart-ID+ support |
+| 28 May 2026 | SK ID Solutions receives new eIDAS 2.0 certification for Qualified Trust Service |
+| 12 June 2026 | Bigbank becomes first Estonian bank to launch Smart-ID+ |
+| 17 June 2026 | LHV scheduled to follow with Smart-ID+ launch |
+| Later 2026 | Swedbank and SEB expected to deploy |
+
+### 2.2 Geographic Distribution
+
+**Active deployment:** Estonia (all major banks in pipeline). Smart-ID operates across the Baltics (Estonia, Latvia, Lithuania), Belgium, with hybrid models in Iceland, India, and Armenia. Smart-ID+ specifically is concentrated in Estonia as the lead market, with expansion expected.
+
+**Key market position:** Smart-ID holds nearly 60% market share for authentication in Estonia, compared to ~23% for national ID card and the remainder for Mobile-ID (ERR, January 2026).
+
+### 2.3 Bank Statements on Delay
+
+- **Swedbank (Raul Vahtra, head of financial crime prevention):** "We have also included this in our action plan and are starting development, but it must be understood that developments like this are technically quite complex and take some time. So I cannot promise the people of Estonia that we will roll out this solution tomorrow, but work toward it is under way." (ERR, 29 January 2026)
+
+- **LHV (Annika Goroško, head of retail banking):** Flagged that Smart-ID+ "is not completely immune to fraud either" — noting that QR code phishing via fraudulent websites remains a residual risk vector. By June 2026, LHV confirmed readiness: "We found the time was right. We've completed our checks and are sure we can now offer our customers significantly more secure service." (ERR, 13 June 2026)
+
+- **SEB (Heigo Tark, fraud prevention chief):** "Our goal is to implement it as soon as possible. We currently expect to have it in place within this year." (ERR, 13 June 2026)
+
+- **State position (Anna Õuekallas, RIA):** "The state cannot coerce the banks into adopting Smart-ID+. The banks come under the regulation of the Estonian Financial Supervision Authority and are subject to EU rules, which require multiple security elements in electronic payments." (ERR, 29 January 2026)
+
+---
+
+## 3. Comparative Analysis: Smart-ID+ vs. EUDI Wallet
+
+| Dimension | Smart-ID+ | EUDI Wallet (eIDAS 2.0) |
+|-----------|-----------|--------------------------|
+| **Legal basis** | eIDAS Qualified Trust Service; QSCD-certified | eIDAS 2.0 Regulation (EU) 2024/1183 |
+| **Authentication model** | App-based with QR code initiation (device co-location required); PIN-based two-factor | Wallet-based with PID at high LoA; selective disclosure of attributes |
+| **Signing capability** | Qualified Electronic Signatures (QES) via QSCD | QES available through integrated remote signing services |
+| **Cross-border recognition** | EU-wide under eIDAS as QTSP-issued | Mandatory cross-border acceptance required by regulation |
+| **Bank acceptance obligation** | Voluntary — banks choose whether to integrate | Mandatory — regulated businesses must accept by mid-2027 (Article 5f) |
+| **Cost to banks** | Per-transaction pricing (€0.0066–0.0475 depending on volume); no license fees | Wallet issuance free to citizens; commercial payment models for trust service providers unresolved |
+| **PSD2/SCA compliance** | Fully compliant; well-established integration | Conflict identified — PSD2 SCA vs. eIDAS 2.0 "strong user authentication" definitions differ; EBA RTS on wallet use in payments still pending |
+| **Integration complexity** | API v3 migration; QR code flow implementation; certificate trust chain updates | Full wallet infrastructure integration; cross-border interoperability testing; coordination with 27+ member state wallet implementations |
+| **Current readiness** | Production-ready since July 2025; banks deploying mid-2026 | ~30-50 wallets projected by Dec 2026; not fully interoperable; Netherlands unlikely to meet deadline; Bulgaria not yet started |
+
+**Key finding:** Smart-ID+ and EUDIW are not binary alternatives. They address overlapping but distinct domains. Smart-ID+ is a specific, mature authentication and signing solution already embedded in Baltic banking. EUDIW is a pan-European identity infrastructure with broader scope but significantly lower current maturity. The tension arises because both consume finite bank development resources and compete for strategic prioritisation within compliance roadmaps.
+
+---
+
+## 4. Hypothesis Evaluation Matrix
+
+| Hypothesis | Description | Evidence Strength | Banking Impact Severity | Geographic Prevalence | Verdict / Ranking |
+|------------|-------------|-------------------|------------------------|----------------------|-------------------|
+| **EUDIW Compliance (Primary)** | Banks are redirecting capital, development resources, and strategic focus from private/consortium identity initiatives like Smart-ID+ toward mandatory EUDIW acceptance requirements under eIDAS 2.0 (deadline: mid-2027). | **High** — Multiple independent sources confirm: (1) Mobey Forum report explicitly states banks "pressed to start formulating strategies" for EUDIW; (2) Deloitte Luxembourg identifies 40-60% KYC cost reduction potential through QES automation, making EUDIW investment case compelling; (3) Dutch Payments Association Taskforce eIDAS 2.0 identifies unresolved PSD2/eIDAS conflict creating compliance paralysis; (4) POTENTIAL Large Scale Pilot involved 140 organisations across 19 member states testing bank account opening with wallets; (5) Biometric Update reports "staggered rollout" and "uneven readiness" across member states, creating planning uncertainty for banks. | **High** — Mandatory acceptance deadline of mid-2027 with regulatory enforcement risk; banks face dual-track compliance burden; resource competition between existing identity systems and wallet integration. | EU-wide, strongest in Netherlands, Germany, Luxembourg, Estonia, and countries with mature existing eID schemes. | **PRIMARY DRIVER** — EUDIW is the strategic horizon that dominates bank identity roadmaps. The Smart-ID+ "stall" is resource triage, not abandonment. |
+| **Hypothesis A: Commercial / Revenue-Sharing Friction** | Disagreements between banks and SK ID Solutions over pricing models, revenue sharing, or license costs are delaying Smart-ID+ adoption. | **Low** — (1) SK ID Solutions pricing is transparent, per-transaction, with no license fees and volume-based tiers (€0.0066–0.0475/transaction); (2) No evidence found of public disputes between any bank and SK ID Solutions over Smart-ID specific pricing; (3) The one documented contractual penalty incident (LHV receiving penalty for Mobile-ID outages, 2020) was resolved and described as "good, constructive cooperation"; (4) Signicat's "elephant in the room" analysis focuses on EUDIW ecosystem payment models, not Smart-ID friction; (5) For qualified Smart-ID issuance, Identity Provider integration fee is €0 — removing a significant cost barrier. | **Low** — Pricing is established and predictable. No evidence of budget disputes driving delayed adoption. | Not applicable — no evidence of geographic concentration. | **LOW LIKELIHOOD** — Pricing friction is not a material driver. The transparent, pay-as-you-go model with zero license fees for qualified issuance is bank-friendly. |
+| **Hypothesis B: Regulatory Liability Shift Under eIDAS 2.0** | Changes to liability frameworks under eIDAS 2.0 create new risk exposure for banks when relying on non-EUDIW identity solutions, causing hesitation about investing in Smart-ID+ infrastructure. | **Medium-Low** — (1) Fourthline analysis identifies that EUDIW shifts liability *from banks to member states* for government-issued credentials, making EUDIW more attractive, not less; (2) RegTech Analyst (March 2026) cautions that "firms remain accountable for how credentials are validated" — liability does not fully transfer; (3) Stibbe (December 2025) identifies that Dutch Central Bank has clarified EUDIW can be used for Wwft-compliant KYC at substantial/high assurance levels; (4) No evidence found that Smart-ID+ specifically introduces new *additional* liability for banks — it upgrades security, which should reduce fraud exposure. | **Medium** — Liability frameworks are shifting, but the direction of shift *favours* adoption of high-assurance identity solutions, not avoidance. Smart-ID+ strengthens authentication security, aligning with regulatory direction. | Netherlands, Luxembourg, Germany — countries with active regulatory interpretation discussions. | **UNLIKELY PRIMARY DRIVER** — The liability shift under eIDAS 2.0 creates incentives to upgrade identity infrastructure (including Smart-ID+), not to delay it. If anything, this factor should accelerate Smart-ID+ adoption as a bridging compliance measure. |
+| **Hypothesis C: Legacy System Integration Costs & Operational Inertia** | The technical complexity and cost of integrating Smart-ID+ API v3 into existing banking core systems, redesigning authentication user flows (QR code scanning), and updating certificate trust chains is the primary cause of deployment delays. | **Medium-High** — (1) Swedbank explicitly cited technical complexity as the primary delay factor in on-record statements; (2) Smart-ID+ introduces fundamentally changed authentication flow: out-of-band QR code scanning requires UX redesign across web and mobile banking; (3) Certificate trust chain updates required (EID-Q 2024E/R, EID-NQ 2021E/R intermediate certificates since November 2024); (4) SK ID Solutions launched Authentigate platform specifically to reduce integration friction by offering a single OpenID Connect integration point; (5) Estonian university thesis documentation confirms integration complexity with certificate handling, headers, and framework configuration in banking environments; (6) All four major banks (Bigbank, LHV, Swedbank, SEB) cited development timelines measured in months, not weeks. | **High** — Direct and immediate impact on deployment velocity. Every bank must allocate development teams, redesign user flows, and validate security. | Estonia (lead market) — all major banks affected. Likely to replicate in Latvia, Lithuania, Belgium as Smart-ID+ expands. | **STRONG SECONDARY DRIVER** — Integration complexity is the proximate cause of the observed delay, but this complexity would have been addressed faster if EUDIW were not competing for the same resources. Legacy cost explains the *mechanics* of the delay; EUDIW explains the *prioritisation*. |
+| **Hypothesis D: Competition from Localised Bank Consortium Solutions or Tech-Giant Passkey Initiatives** | Banks are bypassing Smart-ID+ in favour of competing identity frameworks: bank-led consortium solutions, national digital identity schemes, or platform-native passkey (FIDO2) implementations from Apple/Google/Microsoft. | **Low** — (1) FIDO Alliance white paper explicitly positions passkeys as *complementary* to EUDIW, not competitive; (2) ABANCA (Spanish bank) FIDO case study shows 42% passkey adoption but for internal banking app authentication, not as a cross-border identity standard; (3) NOBID consortium (6 countries, 30+ partners) is piloting EUDIW-based payment identity, not building a parallel alternative to Smart-ID; (4) Smart-ID remains dominant in Baltic market with nearly 60% share — no evidence of user or bank migration away; (5) eeID aggregator offers passkeys *alongside* Smart-ID at same price point, treating them as complementary methods; (6) SK ID Solutions' expansion to Belgium and continued growth in Lithuania (2.66M qualified certificates, 88% market share) demonstrates ongoing demand. | **Low** — Competition exists but is not disrupting Smart-ID adoption. Passkeys serve different use cases (device-bound, platform-native). Bank consortium solutions are converging on EUDIW, not diverging from it. | Pan-European but fragmented — no coordinated alternative to Smart-ID emerging at scale. | **NOT A DRIVER** — Competition is healthy and complementary, not displacing. The identity market is expanding, not zero-sum. Passkeys and EUDIW address different trust models and use cases. |
+
+---
+
+## 5. How SK ID Solutions Is Positioning for Coexistence
+
+SK ID Solutions is not resisting the EUDIW transition but actively positioning Smart-ID for coexistence and integration:
+
+1. **eIDAS 2.0 Certification:** On 28 May 2026, SK ID Solutions received eIDAS 2.0 certification for a new qualified trust service related to Management of Remote Electronic Signature Creation Devices. CEO Kalev Pihl's strategy explicitly frames this as enabling Smart-ID to operate within the EUDIW ecosystem as a qualified trust service provider.
+
+2. **Authentigate Platform:** Launched mid-2024 as a unified authentication gateway using OpenID Connect. Aggregates Smart-ID, Mobile-ID, ID-card, and other methods into a single integration point. This reduces bank integration cost and future-proofs against authentication method changes — including eventual EUDIW integration.
+
+3. **Geographic Expansion:** Smart-ID expanded to Belgium (fifth European market), with active users in six countries. The Belgian entry is explicitly positioned as introducing "diversity and competition" into a market dominated by a single provider. This diversification reduces dependence on any single regulatory jurisdiction.
+
+4. **Loss of Estonian ID-Card Certificate Business:** At end of 2025, Zetes (Belgian QTSP) took over ID-card certificate issuance, ending SK's 24-year role. SK framed this as a strategic pivot: "Our role as a digital trust provider for Estonia and Europe continues to grow." SK continues to support 2.8 million existing certificates through November 2030 while focusing on Smart-ID and Mobile-ID.
+
+5. **Smart-ID+ as Security Enhancement, Not Platform Shift:** Smart-ID+ is an incremental upgrade to existing Smart-ID infrastructure rather than a new platform. Users upgrade via app update; no new installation required. This positions it as a continuous improvement rather than a competing bet.
+
+---
+
+## 6. Strategic Outlook (12-24 Months)
+
+### 6.1 Short-Term (Q3-Q4 2026)
+
+- **Smart-ID+ completes bank rollout in Estonia:** All major banks (Bigbank ✓, LHV ✓, Swedbank, SEB) expected to deploy Smart-ID+ by end of 2026.
+- **Expansion to Latvia and Lithuania:** Smart-ID+ API v3 will likely roll out to other Baltic markets following Estonian deployment validation.
+- **EUDIW member state deadline approaches:** December 2026 deadline will pass with uneven readiness — 30-50 wallets projected, not fully interoperable. Germany, Spain, and Estonia among likely early deliverers; Netherlands, Bulgaria among likely delayed.
+
+### 6.2 Medium-Term (2027)
+
+- **Mandatory bank acceptance kicks in (mid-2027):** Regulated businesses, including banks, must accept EUDIW for strong authentication. Banks that have maintained Smart-ID+ will have a bridging solution while wallet infrastructure matures.
+- **PSD3 / PSR framework expected to clarify EUDIW-payment integration:** The EBA Regulatory Technical Standards on wallet-based authentication in payments remain the critical unresolved dependency.
+- **SK ID Solutions positioned as EUDIW-ecosystem participant:** With eIDAS 2.0 certification and Authentigate platform, SK can serve as an intermediary or credential provider within the wallet ecosystem.
+- **Smart-ID remains dominant in near term:** 60% market share, deep integration, and user familiarity make displacement unlikely within 12-24 months. EUDIW adoption will be gradual, not sudden.
+
+### 6.3 Convergence Scenario (2027-2028)
+
+The most likely resolution is **coexistence and gradual convergence**:
+- Smart-ID and similar private/consortium identity solutions will operate alongside EUDIW as qualified trust services
+- Banks will support multiple authentication methods, selecting based on risk, cost, and user preference
+- The commercial payment model for EUDIW ecosystem participants (Signicat's "elephant") will be resolved through intermediary and clearinghouse mechanisms
+- Banks that invested early in identity infrastructure flexibility (via platforms like Authentigate) will absorb EUDIW integration with lower incremental cost
+
+### 6.4 Risk Factors
+
+| Risk | Likelihood | Impact |
+|------|-----------|--------|
+| EUDIW interoperability failures delay bank acceptance beyond 2027 | Medium | High — extends dual-track costs |
+| EBA fails to issue PSD2/eIDAS 2.0 alignment guidance before 2027 deadline | High | High — compliance uncertainty for payment authentication |
+| Member states issue incompatible wallet implementations | Medium | High — undermines cross-border acceptance mandate |
+| Smart-ID loses relevance if EUDIW achieves rapid, frictionless adoption | Low | Medium — but SK's certification strategy mitigates this |
+| Cyber fraud spike during transition period as attackers exploit multi-method confusion | Medium | Medium — Smart-ID+'s security improvements provide partial mitigation |
+
+---
+
+## 7. Key Source Citations
+
+1. ERR News, "Banks not rushing into Smart-ID security upgrade," 29 January 2026. [news.err.ee/1609925612](https://news.err.ee/1609925612)
+
+2. ERR News, "Estonian banks roll out Smart-ID upgrade aimed at curbing scammers," 13 June 2026. [news.err.ee/1610054356](https://news.err.ee/1610054356)
+
+3. SK ID Solutions, "Smart-ID+: Experience the Next Generation of Secure Authentication Now," 26 June 2025. [skidsolutions.eu](https://www.skidsolutions.eu/news/smart-id-experience-the-next-generation-of-secure-authentication-now/)
+
+4. SK ID Solutions, "SK ID Solutions receives new eIDAS 2.0 certification for qualified trust service," 28 May 2026. [skidsolutions.eu](https://www.skidsolutions.eu/news/sk-id-solutions-receives-new-eidas-2-0-certification-for-qualified-trust-service/)
+
+5. SK ID Solutions, "From Estonia to Europe: 24 Years of Digital Trust," 12 December 2025. [skidsolutions.eu](https://www.skidsolutions.eu/news/from-estonia-to-europe-24-years-of-digital-trust/)
+
+6. SK ID Solutions, "Price List of Smart-ID Service," 2023-2026. [skidsolutions.eu/price-list](https://www.skidsolutions.eu/price-list/)
+
+7. Biometric Update, "Will the EUDI Wallet be ready in 2026? Experts say probably not," 26 December 2025. [biometricupdate.com](https://www.biometricupdate.com/202512/will-the-eudi-wallet-be-ready-in-2026-experts-say-probably-not)
+
+8. Dutch Payments Association, "eIDAS 2 and payments," October 2025, updated February 2026. [betaalvereniging.nl](https://www.betaalvereniging.nl/en/knowledge-base/digital-identity/eidas-2-and-payments/)
+
+9. Dutch Payments Association / INNOPAY Taskforce eIDAS 2.0, "The EU Digital Identity Wallet in payments: Interpretation of legislators' intention and feasibility assessment," March 2026.
+
+10. Mobey Forum, "Mapping the Business Case: Banks and the European Digital Identity Wallet," May 2025. [paymentsindustryintelligence.com](https://paymentsindustryintelligence.com/wp-content/uploads/2025/05/Mapping-the-Business-Case-Banks-and-the-European-Digital-Identity-Wallet.pdf)
+
+11. Deloitte Luxembourg, "eIDAS 2.0: The digital identity revolution reshaping financial services," 10 February 2026. [deloitte.com](https://www.deloitte.com/lu/en/our-thinking/future-of-advice/eidas-2-0-digital-identity-revolution-reshaping-financial-services.html)
+
+12. Fourthline, "Why Banks Should Care About Qualified Electronic Signatures in 2026," 2026. [fourthline.com](https://www.fourthline.com/blog/why-banks-should-care-about-qualified-electronic-signatures-in-2026)
+
+13. Signicat / Jon Ølnes, "The elephant in the European Digital Identity Wallet room — how can actors get paid?" 5 March 2025. [signicat.com](https://www.signicat.com/blog/the-elephant-in-the-european-digital-identity-wallet-room-how-can-actors-get-paid)
+
+14. Stibbe, "eIDAS 2.0: Key Implications for Financial Institutions in the Dutch Market," 18 December 2025. [stibbe.com](https://www.stibbe.com/publications-and-insights/eidas-20-key-implications-for-financial-institutions-in-the-dutch-market)
+
+15. FIDO Alliance, "White Paper: Passkeys and Verifiable Digital Credentials: A Harmonized Path to Secure Digital Identity," 22 September 2025. [fidoalliance.org](https://fidoalliance.org/passkeys-and-verifiable-digital-credentials-a-harmonized-path-to-secure-digital-identity/)
+
+16. eIDAS Pro Blog, "POTENTIAL Pilot Final Results: 6 Use Cases, 5 Lessons for Every Relying Party," 27 April 2026. [eidas-pro.com](https://eidas-pro.com/blog/potential-pilot-final-results-6-use-cases-5-lessons-relying-parties)
+
+17. e-Estonia, "Trust and competition in digital identity in Europe" (Kalev Pihl interview), 20 April 2026. [e-estonia.com](https://e-estonia.com/trust-and-competition_in-digital-identity-in-europe/)
+
+18. RegTech Analyst, "How can financial institutions leverage eIDAS 2.0 for strong growth?" 12 March 2026. [regtechanalyst.com](https://regtechanalyst.com/how-can-financial-institutions-leverage-eidas-2-0-for-strong-growth/)
+
+---
+
+## Appendix: Methodology Notes
+
+- **Search period:** 2023 to present (June 2026) with emphasis on 2025-2026
+- **Search tools used:** Exa neural search, Firecrawl web search, Google AI Search
+- **Content extraction:** Full-page markdown extraction from 10+ primary source URLs
+- **Source types:** Industry news (ERR, Biometric Update), provider press releases (SK ID Solutions), regulatory analysis (Dutch Payments Association, Stibbe, Deloitte, Fourthline), industry association reports (Mobey Forum, FIDO Alliance), EU Large Scale Pilot findings (POTENTIAL, NOBID), commercial analysis (Signicat), price lists and technical documentation (SK ID Solutions GitHub)
+- **Limitations:** Primary evidence concentrated on Estonian/Baltic market as Smart-ID+ lead deployment region. Cross-referenced with pan-European regulatory analysis to ensure generalisability. Limited public disclosure by individual banks on internal strategic decision-making.

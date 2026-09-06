@@ -7,7 +7,7 @@ description: Technical feasibility analysis of FIDO2/WebAuthn pivot for eIDAS QE
 
 **To:** Executive Steering Committee
 **From:** Senior Security Architect & Product Lead
-**Date:** October 26, 2023
+**Date:** 2023-10-26
 **Subject:** Technical Feasibility of FIDO2/WebAuthn Pivot for eIDAS QES and High Assurance
 
 ## Summary

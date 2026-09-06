@@ -308,6 +308,28 @@ Estonia operates one of the world's most advanced digital societies, with virtua
 
 ---
 
+## Research Relevance: Why This Catalog Matters
+
+This catalog serves a specific analytical purpose for the Smart-ID security research. Rather than being a generic directory of Estonian organizations, each entry is selected based on its relevance to the authentication security problems examined throughout this research.
+
+### Key Analytical Links
+
+**Financial Services (Section 1):** Estonian banks are the primary Relying Parties for Smart-ID and the organizations with the most to lose from authentication failures. The €42M in documented fraud losses — and the concentration of those losses in Smart-ID-authenticated transactions — demonstrate the economic scale of the architectural vulnerabilities analyzed in [Smart-ID Security Analysis](../01-core-research/smartid-security-analysis.md). The ownership structure (Swedbank, SEB, Luminor as shareholders in SK ID Solutions) is directly relevant to the conflict-of-interest analysis in the enforcement strategy documents.
+
+**Government E-Services (Section 2):** Estonia's state portals adopted Smart-ID+ in February 2026 — four months ahead of commercial banks. This asymmetric adoption pattern (state leads, banks lag) is evidence of the market failure analyzed in the [RIA Memorandum](../04-regulatory-memoranda/ria-memorandum.md). The state's ability to mandate security upgrades for its own portals — contrasted with its inability to compel banks — demonstrates the regulatory jurisdiction gap.
+
+**Healthcare (Section 6):** The Allium UPI OÜ breach (700,000 records, half the population) and Apotheka breach exemplify the consequences of authentication failures at scale. When authentication is compromised, the blast radius extends to health data, genetic records, and prescription histories. These incidents demonstrate why "risk acceptance" at the authentication layer is not a localized decision — it cascades into every sector that relies on the same identity infrastructure.
+
+**Critical Infrastructure (Section 8):** Estonia's X-Road data exchange layer connects all government services. Compromise of Smart-ID authentication at any single service provider creates a potential pivot point into the broader infrastructure. The e-residency program (§2.4) adds a cross-jurisdictional dimension: e-residents from 170+ countries use the same PKI infrastructure, making authentication failures an international problem.
+
+### How to Use This Catalog
+
+- **For security researchers:** Prioritize targets by the "Data Sensitivity" and "Notable Incidents" columns. CRITICAL-rated services with documented breaches represent the highest-value research targets.
+- **For regulators:** The catalog maps the surface area of Smart-ID dependency across the Estonian economy, demonstrating that authentication infrastructure is a systemic risk, not a commercial concern.
+- **For Relying Parties:** Compare your authentication implementation against peers in the same sector. If competitors have adopted Smart-ID+ and you have not, the catalog provides evidence for prioritizing migration.
+
+---
+
 ## SOURCES
 
 1. [Arnis Paršovs: Banks fail to implement measures against Smart-ID phishing](https://news.err.ee/1609910821/arnis-parsovs-banks-fail-to-implement-measures-against-smart-id-phishing) (ERR, Jan 2026)

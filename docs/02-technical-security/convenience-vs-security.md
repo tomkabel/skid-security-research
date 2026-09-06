@@ -18,22 +18,17 @@ Technically, this creates a Server-Initiated Synchronization. The state of the a
 
 **Standards:** This approach is currently under scrutiny in updated guidelines. **NIST SP 800-63B** allows out-of-band push, but recent industry shifts (driven by high-profile breaches like Uber and Lapsus$) strongly favor mechanisms that prevent "MFA Fatigue." This behavior is technically compliant with older OOB standards but falls short of emerging **Phishing-Resistant** definitions which prefer that the user demonstrates intent on the device *before* the prompt appears.
 
-**Expert Analysis:**
+**Analysis:**
 
-* **PKI & Identity Architect:**
-  * **The problem:** This architecture is the root cause of **MFA Fatigue (Notification Bombing)** attacks. Because the attacker can force the UI to appear on the victim's screen, they can spam requests (at 2 AM, for example) until the user accidentally or frustratedly clicks "Confirm/PIN1." The user's device acts as an annoyance vector controlled by the attacker.
-  * **Implementation issues:** Reliance on third-party delivery (APNs/FCM) introduces latency and reliability issues. If push fails, the fallback is a manual open, creating inconsistent UX.
-  * **Architectural fragility:** The "Wake-Up" signal is not authenticated. The OS displays the notification before the app fully verifies the cryptographic context. A malicious app on the same device could potentially mimic these system notifications (UI Spoofing) to trick the user into opening a fake overlay.
-  * **Alternatives:** Shift to a **"Silent Pending"** model by default. The notification should say "You have a request," but clicking it should only open the app dashboard. The *dialog* should not pop up automatically. Or, require the user to open the app manually to view requests.
+The push-based notification architecture is the root cause of **MFA Fatigue (Notification Bombing)** attacks. Because the attacker can force the UI to appear on the victim's screen, they can spam requests (at 2 AM, for example) until the user accidentally or frustratedly clicks "Confirm/PIN1." The user's device acts as an annoyance vector controlled by the attacker.
 
-* **Mobile Security Researcher:**
-  * **The problem:** Context Switching. By interrupting the user's current activity (e.g., watching a video, typing an email) with a modal dialog, the design encourages **reflexive dismissal**. Users are trained to clear pop-ups to return to their task. If "clearing" requires entering a PIN (muscle memory), the security is bypassed by the user's desire to remove the obstruction.
-  * **Alternatives:** Implement **Intent Filters**. The app should only present the signing dialog if the device detects the user recently interacted with the app or if the biometrics were recently primed, rather than launching from a cold state based solely on a server signal.
+Implementation concerns include reliance on third-party delivery (APNs/FCM), which introduces latency and reliability issues. If push fails, the fallback is a manual open, creating inconsistent UX. The "Wake-Up" signal is not authenticated — the OS displays the notification before the app fully verifies the cryptographic context. A malicious app on the same device could potentially mimic these system notifications (UI Spoofing) to trick the user into opening a fake overlay.
 
-* **CISO & Governance Expert:**
-  * **The problem:** Lack of "Presence" verification. A push notification can light up a stolen phone. If the PIN is simple or the biometric acts on the first face seen, unauthorized access is easier than in a flow requiring manual app navigation.
-  * **Implementation issues:** High volume of support tickets related to "Who is trying to log in?"
-  * **Alternatives:** Mandatory **App-Lock**. Even if the push opens the app, the user must authenticate to the *app* (FaceID/Fingerprint) *before* seeing the specific transaction details, creating a "speed bump" for accidental acceptances.
+**Context switching** is a critical concern. By interrupting the user's current activity with a modal dialog, the design encourages **reflexive dismissal**. Users are trained to clear pop-ups to return to their task. If "clearing" requires entering a PIN (muscle memory), the security is bypassed by the user's desire to remove the obstruction.
+
+**Presence verification** is absent. A push notification can light up a stolen phone. If the PIN is simple or the biometric acts on the first face seen, unauthorized access is easier than in a flow requiring manual app navigation.
+
+**Improvement path:** Shift to a **"Silent Pending"** model. The notification should say "You have a request," but clicking it should only open the app dashboard. The dialog should not pop up automatically. Implement **App-Lock**: even if the push opens the app, the user must authenticate to the *app* (FaceID/Fingerprint) *before* seeing specific transaction details, creating a speed bump for accidental acceptances. Implement **Intent Filters**: the app should only present the signing dialog if the device detects the user recently interacted with the app or if biometrics were recently primed, rather than launching from a cold state based solely on a server signal.
 
 ## 2. Absence of Manual VC Entry (Passive Comparison or Selection)
 
@@ -46,24 +41,15 @@ Technically, this relates to **Channel Binding Visualization**. The goal is to p
 
 **Standards:** This contradicts the latest defensive recommendations against **Adversary-in-the-Middle (AiTM)** attacks. **Microsoft**, **Google**, and **NIST** drafts are moving toward **Number Matching** (Manual Entry) as the standard. Manual entry forces a "Data Transfer" from the RP to the Authenticator, proving the user is in control of both. Passive comparison fails because users exhibit **"Confirmation Bias"** (they assume the system is working and ignore the code).
 
-**Expert Analysis:**
+**Analysis:**
 
-* **PKI & Identity Architect:**
-  * **The problem:** **Low Entropy & Probability.**
-    * In "Passive Comparison," the cryptographic assurance is effectively **zero** because the protocol proceeds regardless of whether the user actually checked the code. The only gate is the PIN.
-    * In "Selection" (1-of-3), an attacker spamming requests has a **1 in 3 (33%)** probability of the user guessing correctly or the attacker getting lucky if they control the flow. Compared to a 2-digit manual entry (1/100) or 4-digit (1/10,000), 1/3 is unacceptably high risk for financial transactions.
-  * **Implementation issues:** Low. This is optimized for convenience, not security.
-  * **Architectural issue:** The generation of the VC is deterministic based on the session hash. If an attacker can pre-calculate hashes (collision attack), they can predict the VC.
-  * **Alternatives:** **Mandate Manual Entry.** The user *must* type the 4 digits shown on the browser into the mobile app. This makes the probability of a successful blind accept **1 in 10,000**.
+The cryptographic assurance of "Passive Comparison" is effectively **zero** because the protocol proceeds regardless of whether the user actually checked the code. The only gate is the PIN. In "Selection" (1-of-3), an attacker spamming requests has a **1 in 3 (33%)** probability of the user guessing correctly or the attacker getting lucky if they control the flow. Compared to a 2-digit manual entry (1/100) or 4-digit (1/10,000), 1/3 is unacceptably high risk for financial transactions.
 
-* **Mobile Security Researcher:**
-  * **The problem:** **Attacker-in-the-Middle (AiTM) / Proxy Attacks.** In a live phishing scenario, the attacker proxies the connection. The attacker sees the real VC code from the bank. The attacker displays that VC code on their phishing site. The user sees the code, the app shows the code. They match. The user accepts. Passive comparison **does not prevent real-time phishing**.
-  * **Alternatives:** While Manual Entry doesn't solve the Proxy issue (attacker can just relay the number), it stops **Automated Attacks** and **Fatigue Attacks**. To solve the Proxy issue, you need **FIDO2/WebAuthn** (origin binding), not visual codes. But as a fallback, Manual Entry is vastly superior to "Pick 1 of 3."
+In a live phishing scenario, the attacker proxies the connection, sees the real VC code from the bank, and displays that VC code on their phishing site. The user sees the code, the app shows the code — they match. The user accepts. Passive comparison **does not prevent real-time phishing**.
 
-* **CISO & Governance Expert:**
-  * **The problem:** **Liability Shift.** In a "Passive Comparison" model, the user can plausibly deny the transaction ("I didn't check the code, I just typed my PIN"). If the system *forces* entry of the code, the user cannot claim they weren't looking at the screen. The current Smart-ID design leaves the RP vulnerable to repudiation claims because the action (checking the code) is not enforced by the system.
-  * **Implementation issues:** "Pick 1 of 3" is confusing for elderly or non-tech-savvy users who panic when they see numbers they don't recognize.
-  * **Alternatives:** Abandon "Pick 1 of 3." It is security theater. Move to **Manual Entry** immediately to align with Microsoft and Google ecosystem standards, reducing user training friction (since they already do this for MS Office 365).
+In a "Passive Comparison" model, the user can plausibly deny the transaction ("I didn't check the code, I just typed my PIN"). If the system *forces* entry of the code, the user cannot claim they weren't looking at the screen. "Pick 1 of 3" adds confusion for elderly or non-tech-savvy users who panic when they see numbers they don't recognize.
+
+**Improvement path:** Mandate **Manual Entry**. The user *must* type the 4 digits shown on the browser into the mobile app, reducing blind accept probability to 1 in 10,000. Abandon "Pick 1 of 3" — it is security theater. While Manual Entry doesn't solve the proxy issue (attacker can relay the number), it stops automated attacks and fatigue attacks. The proxy issue requires FIDO2/WebAuthn origin binding.
 
 ## 3. UX Prioritized to Minimize Friction (Friction Reduction)
 

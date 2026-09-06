@@ -1,36 +1,24 @@
 {
   "extends": [
     ":separateMajor",
-    ":semanticVersions",
-    ":maintainLockFileWindows"
+    ":semanticCommits"
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["vitepress", "vite", "vue"],
-      "updateTypes": ["minor", "patch"],
-      "allowedVersions": "^1.6.0",
-      "semanticPrerelease": true
+      "groupName": "VitePress core",
+      "matchPackageNames": ["vitepress", "@types/node"],
+      "matchUpdateTypes": ["minor", "patch"]
     },
     {
-      "matchPackageNames": ["vite-plugin-compression2", "vitepress-sidebar", "markdown-it-footnote"],
-      "updateTypes": ["minor", "patch"],
-      "allowedVersions": "^1.3.0"
+      "groupName": "VitePress plugins",
+      "matchPackageNames": ["vite-plugin-compression2", "vitepress-sidebar"],
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ],
   "timezone": "Europe/Tallinn",
-  "schedule": [
-    "after 5pm on the first day of the month"
-  ],
+  "schedule": ["after 5pm on the first day of the month"],
   "rangeStrategy": "bump",
-  "ignorePosture": "rebase",
   "reviewers": ["tomkabel"],
   "branchPrefix": "renovate/",
-  "commitBodyPrefix": "[Renovate] ",
-  "labels": ["dependencies"],
-  "majorVersionBump": false,
-  "semanticVersionTags": true,
-  "packageLockFileRenewal": true,
-  "packageGroup": {
-    "matchGroupPrefixes": true
-  }
+  "labels": ["dependencies"]
 }

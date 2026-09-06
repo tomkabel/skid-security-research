@@ -5,10 +5,10 @@ description: Comparative analysis of regulatory intervention against QTSPs with 
 
 # Comparative Analysis: Regulatory Intervention Against QTSPs
 
-**To:** Legal & Compliance Strategy Unit
-**From:** Senior Cybersecurity Policy Auditor
-**Date:** February 1, 2026
+**Date:** 2026-02-01
 **Subject:** Validity of Enforcement Mechanisms Against SK ID Solutions – Comparative Analysis with EU Precedents
+
+> **Author's Note:** This document represents technical and policy analysis. The author is not a lawyer. For legal advice on regulatory enforcement, consult with qualified legal professionals.
 
 ## Summary
 

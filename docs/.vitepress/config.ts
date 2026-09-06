@@ -54,13 +54,6 @@ export default defineConfig({
     theme: {
       light: 'github-light',
       dark: 'github-dark'
-    },
-    config: (md) => {
-      // Use dynamic import for ES module compatibility
-      md.use(async () => {
-        const footnote = await import('markdown-it-footnote')
-        return footnote.default || footnote
-      })
     }
   },
 

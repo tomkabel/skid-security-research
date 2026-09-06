@@ -3,8 +3,6 @@
 <div align="center">
 
 [![View Documentation](https://img.shields.io/badge/View-Documentation-brightgreen?style=for-the-badge&logo=github)](https://tomkabel.github.io/skid-security-research/)
-[![Live Documentation](https://img.shields.io/badge/Live-Documentation-blueviolet?style=for-the-badge&logo=read-the-docs)](https://tomkabel.github.io/skid-security-research/)
-
 [![GitHub Stars](https://img.shields.io/github/stars/tomkabel/skid-security-research?style=for-the-badge)](https://github.com/tomkabel/skid-security-research/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/tomkabel/skid-security-research?style=for-the-badge)](https://github.com/tomkabel/skid-security-research/network/members)
 
@@ -14,7 +12,7 @@
 
 ## Research Overview
 
-This repository contains independent security research examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. The research uses Smart-ID as a case study for analyzing broader questions in trust service provider security.
+Independent security research examining authentication architectures, vulnerability patterns, and regulatory compliance considerations for electronic identification systems. Smart-ID is used as a case study for analyzing broader questions in trust service provider security.
 
 ### Focus Areas
 
@@ -29,32 +27,26 @@ This repository contains independent security research examining authentication 
 
 ## Documentation Website
 
-The project includes a full documentation website built with VitePress, automatically deployed to GitHub Pages.
+The project includes a full documentation website built with VitePress, deployed to GitHub Pages via GitHub Actions.
 
-### Access the Research
+### Live Site
 
-**Live Documentation**: [https://tomkabel.github.io/skid-security-research/](https://tomkabel.github.io/skid-security-research/)
+**[https://tomkabel.github.io/skid-security-research/](https://tomkabel.github.io/skid-security-research/)**
 
 ### Local Development
 
 ```bash
-cd docs
 npm install
-npm run dev
+npm run docs:dev
 ```
 
 ### Production Build
 
 ```bash
-cd docs
-npm run build
+npm run docs:build
 ```
 
-The built site will be in `docs/.vitepress/dist/`.
-
-### Deployment
-
-The documentation automatically deploys to GitHub Pages via GitHub Actions on every push to `master`.
+Built output lands in `docs/.vitepress/dist/`.
 
 ---
 
@@ -64,18 +56,20 @@ The documentation automatically deploys to GitHub Pages via GitHub Actions on ev
 .
 ├── docs/                              # VitePress documentation website
 │   ├── .vitepress/
-│   │   └── config.ts                 # VitePress configuration
-│   ├── 01-core-research/             # Primary security analysis
-│   ├── 02-technical-security/        # Vulnerability assessments and attack vectors
-│   ├── 03-regulatory-framework/      # Laws, acts, and regulations reference
-│   ├── 04-regulatory-memoranda/      # Formal submissions to Estonian regulators
-│   ├── 05-enforcement/               # Regulatory enforcement strategy
-│   ├── 06-supplementary-research/    # Supporting research and intelligence
-│   ├── 07-opinion-editorials/        # Editorial analysis and expert perspectives
-│   ├── index.md                      # Documentation home page
-│   └── package.json
-├── 06-archived/                       # Historical files from pre-reorganization
-├── LICENSE                            # CC-BY-4.0 license for research content
+│   │   └── config.ts                  # VitePress configuration
+│   ├── 01-core-research/              # Primary security analysis
+│   ├── 02-technical-security/         # Vulnerability assessments and attack vectors
+│   ├── 03-regulatory-framework/       # Laws, acts, and regulations reference
+│   ├── 04-regulatory-memoranda/       # Formal submissions to Estonian regulators
+│   ├── 05-enforcement/                # Regulatory enforcement strategy
+│   ├── 06-supplementary-research/     # Supporting research and intelligence
+│   ├── 07-opinion-editorials/         # Editorial analysis and expert perspectives
+│   ├── public/                        # Static assets (logos, favicons)
+│   └── index.md                       # Documentation home page
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                 # GitHub Pages deployment
+├── LICENSE                            # CC-BY-4.0 for research content
 ├── README.md                          # This file
 └── package.json                       # VitePress build configuration
 ```
@@ -86,7 +80,7 @@ The documentation automatically deploys to GitHub Pages via GitHub Actions on ev
 
 ### Authentication Security
 
-The research examines how cross-device authentication flows handle cryptographic binding between the browser session and the mobile authenticator. Key technical considerations include:
+Cross-device authentication flows lack cryptographic binding between the browser session and the mobile authenticator. Key technical considerations:
 
 1. **Origin Binding**: Cryptographic binding of authentication credentials to the specific relying party origin
 2. **Channel Binding**: Linking the authentication operation to the underlying TLS session
@@ -94,7 +88,7 @@ The research examines how cross-device authentication flows handle cryptographic
 
 ### Standards Alignment
 
-Comparison with established standards reveals areas where current implementations may diverge from industry best practices:
+Comparison with established standards reveals areas where current implementations diverge from industry best practices:
 
 - **FIDO2/WebAuthn** provides cryptographic origin binding at the protocol level [[1]](#references)
 - **NIST SP 800-63-4** defines phishing resistance requirements for Authenticator Assurance Level 3 [[2]](#references)
@@ -128,8 +122,6 @@ Relevant regulatory instruments include:
 
 ## Methodology
 
-The research employs standard security analysis methodologies including:
-
 - Comparative standards analysis
 - Architecture review against established frameworks
 - Offensive security testing in controlled environments
@@ -156,26 +148,26 @@ All identified vulnerabilities were reported to SK ID Solutions through responsi
 
 ## Licensing
 
-### Research Content (CC-BY-4.0)
+### Research Content — CC-BY-4.0
 
-All research documents, analysis, and written content are licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE). This allows sharing, adapting, and commercial use with proper attribution.
+All research documents, analysis, and written content in `docs/` are licensed under [Creative Commons Attribution 4.0 International](LICENSE). This allows sharing, adapting, and commercial use with proper attribution.
 
-### Code Components (MIT)
+### Build System — MIT
 
-The documentation website build system and configuration files (located in `docs/`) are licensed under the MIT License.
+The VitePress configuration, deployment scripts, and build tooling are licensed under the MIT License (see `docs/LICENSE`).
 
 ### Third-Party Materials
 
-Any third-party code, research papers, or materials included in this repository maintain their original licenses. The reproduced SK ID Solutions documentation in `docs/03-regulatory-framework/suggested-security-measures.md` is property of SK ID Solutions AS and is included for analytical purposes under fair use.
+Third-party code, research papers, or materials included in this repository maintain their original licenses. The reproduced SK ID Solutions documentation in `docs/03-regulatory-framework/suggested-security-measures.md` is property of SK ID Solutions AS and is included for analytical purposes under fair use.
 
 ---
 
 ## Disclaimer
 
-This research is provided for educational and informational purposes only. All findings have been disclosed through appropriate responsible disclosure channels. The views expressed in editorial and opinion documents represent the author's analysis and do not constitute legal advice.
+This research is provided for educational and informational purposes only. All findings have been disclosed through appropriate responsible disclosure channels. The views expressed in editorial and opinion documents represent the author's analysis and do not constitute legal advice. The author is not a lawyer. For legal advice on matters involving regulatory compliance, liability, or enforcement, consult with qualified legal professionals.
 
 ---
 
-## Security Researcher
+## Author
 
-This repository represents independent security research by Tom Kristian Abel.
+Independent security research by Tom Kristian Abel.
